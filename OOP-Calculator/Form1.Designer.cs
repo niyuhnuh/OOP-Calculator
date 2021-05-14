@@ -49,12 +49,13 @@ namespace OOP_Calculator
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.equalsbtn = new System.Windows.Forms.Button();
             this.decimalbtn = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.signbtn = new System.Windows.Forms.Button();
             this.txtbxOutput = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.equalsbtn = new System.Windows.Forms.Button();
+            this.divbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // percentbtn
@@ -103,7 +104,7 @@ namespace OOP_Calculator
             // dividebtn
             // 
             this.dividebtn.BackColor = System.Drawing.SystemColors.Control;
-            this.dividebtn.Location = new System.Drawing.Point(387, 213);
+            this.dividebtn.Location = new System.Drawing.Point(874, 514);
             this.dividebtn.Name = "dividebtn";
             this.dividebtn.Size = new System.Drawing.Size(119, 61);
             this.dividebtn.TabIndex = 7;
@@ -151,7 +152,7 @@ namespace OOP_Calculator
             this.multiplybtn.TabIndex = 11;
             this.multiplybtn.Text = "*";
             this.multiplybtn.UseVisualStyleBackColor = false;
-            this.multiplybtn.Click += new System.EventHandler(this.multiplybtn_Click);
+            this.multiplybtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn9
             // 
@@ -173,7 +174,7 @@ namespace OOP_Calculator
             this.btn8.TabIndex = 9;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
-            this.btn8.Click += new System.EventHandler(this.button11_Click);
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
@@ -195,7 +196,7 @@ namespace OOP_Calculator
             this.subtractbtn.TabIndex = 15;
             this.subtractbtn.Text = "-";
             this.subtractbtn.UseVisualStyleBackColor = false;
-            this.subtractbtn.Click += new System.EventHandler(this.subtractbtn_Click);
+            this.subtractbtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn6
             // 
@@ -239,7 +240,7 @@ namespace OOP_Calculator
             this.additionbtn.TabIndex = 19;
             this.additionbtn.Text = "+";
             this.additionbtn.UseVisualStyleBackColor = false;
-            this.additionbtn.Click += new System.EventHandler(this.additionbtn_Click);
+            this.additionbtn.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn3
             // 
@@ -273,20 +274,6 @@ namespace OOP_Calculator
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
-            // 
-            // equalsbtn
-            // 
-            this.equalsbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.equalsbtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.equalsbtn.FlatAppearance.BorderSize = 0;
-            this.equalsbtn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.equalsbtn.Location = new System.Drawing.Point(387, 481);
-            this.equalsbtn.Name = "equalsbtn";
-            this.equalsbtn.Size = new System.Drawing.Size(119, 61);
-            this.equalsbtn.TabIndex = 23;
-            this.equalsbtn.Text = "=";
-            this.equalsbtn.UseVisualStyleBackColor = false;
-            this.equalsbtn.Click += new System.EventHandler(this.button21_Click);
             // 
             // decimalbtn
             // 
@@ -346,14 +333,36 @@ namespace OOP_Calculator
             this.lblOutput.Text = "0";
             this.lblOutput.UseCompatibleTextRendering = true;
             // 
+            // equalsbtn
+            // 
+            this.equalsbtn.Location = new System.Drawing.Point(387, 481);
+            this.equalsbtn.Name = "equalsbtn";
+            this.equalsbtn.Size = new System.Drawing.Size(119, 61);
+            this.equalsbtn.TabIndex = 26;
+            this.equalsbtn.Text = "=";
+            this.equalsbtn.UseVisualStyleBackColor = true;
+            this.equalsbtn.Click += new System.EventHandler(this.equalsbtn_Click);
+            // 
+            // divbtn
+            // 
+            this.divbtn.BackColor = System.Drawing.SystemColors.Control;
+            this.divbtn.Location = new System.Drawing.Point(387, 213);
+            this.divbtn.Name = "divbtn";
+            this.divbtn.Size = new System.Drawing.Size(119, 61);
+            this.divbtn.TabIndex = 27;
+            this.divbtn.Text = "/";
+            this.divbtn.UseVisualStyleBackColor = false;
+            this.divbtn.Click += new System.EventHandler(this.operator_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 572);
+            this.Controls.Add(this.divbtn);
+            this.Controls.Add(this.equalsbtn);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.txtbxOutput);
-            this.Controls.Add(this.equalsbtn);
             this.Controls.Add(this.decimalbtn);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.signbtn);
@@ -407,12 +416,13 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button equalsbtn;
         private System.Windows.Forms.Button decimalbtn;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button signbtn;
         private System.Windows.Forms.TextBox txtbxOutput;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Button equalsbtn;
+        private System.Windows.Forms.Button divbtn;
     }
 }
 

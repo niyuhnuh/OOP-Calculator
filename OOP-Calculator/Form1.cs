@@ -13,7 +13,6 @@ namespace OOP_Calculator
     public partial class Form1 : Form
     {
         Double inputValue = 0;
-        Double inputValue2 = 0; 
         String operation = "";
         
         public Form1()
@@ -32,7 +31,7 @@ namespace OOP_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            InitializeComponent();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -42,10 +41,7 @@ namespace OOP_Calculator
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
 
-            txtbxOutput.Text = txtbxOutput.Text + "8";
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -53,73 +49,9 @@ namespace OOP_Calculator
                
         }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "1";
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "2";
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            if(txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "3";
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "4";
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "5";
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "6";
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear(); 
-
-            txtbxOutput.Text = txtbxOutput.Text + "7";
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            txtbxOutput.Text = txtbxOutput.Text + "9";
-        }
-
         private void btn0_Click(object sender, EventArgs e)
         {
-            txtbxOutput.Text = txtbxOutput.Text + "0";
+            
         }
 
         private void txtbxOutput_TextChanged(object sender, EventArgs e)
@@ -136,8 +68,7 @@ namespace OOP_Calculator
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
-            operation = "+";
-            inputValue = Double.Parse(txtbxOutput.Text);
+
 
         }
 
@@ -154,20 +85,17 @@ namespace OOP_Calculator
 
         private void subtractbtn_Click(object sender, EventArgs e)
         {
-            operation = "-";
-            inputValue = Double.Parse(txtbxOutput.Text);
+            
         }
 
         private void multiplybtn_Click(object sender, EventArgs e)
         {
-            operation = "*";
-            inputValue = Double.Parse(txtbxOutput.Text);
+           
         }
 
         private void dividebtn_Click(object sender, EventArgs e)
         {
-            operation = "/";
-            inputValue = Double.Parse(txtbxOutput.Text);
+            
         }
 
         private void signbtn_Click(object sender, EventArgs e)
@@ -180,33 +108,82 @@ namespace OOP_Calculator
 
         private void equalsbtn_Click(object sender, EventArgs e)
         {
-            inputValue2 = Double.Parse(txtbxOutput.Text);
-
+            
             switch (operation)
             {
                 case "+":
-                    txtbxOutput.Text = Convert.ToString(inputValue + inputValue2);
+                    txtbxOutput.Text = Convert.ToString(inputValue + Double.Parse(txtbxOutput.Text));
                     break;
 
                 case "-":
-                    txtbxOutput.Text = Convert.ToString(inputValue - inputValue2);
+                    txtbxOutput.Text = Convert.ToString(inputValue - Double.Parse(txtbxOutput.Text));
                     break;
 
                 case "*":
-                    txtbxOutput.Text = Convert.ToString(inputValue * inputValue2);
+                    txtbxOutput.Text = Convert.ToString(inputValue * Double.Parse(txtbxOutput.Text));
                     break;
 
                 case "/":
-                    txtbxOutput.Text = Convert.ToString(inputValue / inputValue2);
+                    txtbxOutput.Text = Convert.ToString(inputValue / Double.Parse(txtbxOutput.Text));
                     break;
 
                 default:
                     break;
 
-
-
             }
+        }
 
+        private void operator_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            operation = button.Text;
+            inputValue = Double.Parse(txtbxOutput.Text);
+
+
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
 
         }
     }
