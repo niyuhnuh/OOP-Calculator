@@ -53,7 +53,7 @@ namespace OOP_Calculator
             this.decimalbtn = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.signbtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtbxOutput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // percentbtn
@@ -147,6 +147,7 @@ namespace OOP_Calculator
             this.btn9.TabIndex = 10;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
@@ -166,6 +167,7 @@ namespace OOP_Calculator
             this.btn7.TabIndex = 8;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // subtractbtn
             // 
@@ -184,6 +186,7 @@ namespace OOP_Calculator
             this.btn6.TabIndex = 14;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -193,6 +196,7 @@ namespace OOP_Calculator
             this.btn5.TabIndex = 13;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -202,6 +206,7 @@ namespace OOP_Calculator
             this.btn4.TabIndex = 12;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // additionbtn
             // 
@@ -220,6 +225,7 @@ namespace OOP_Calculator
             this.btn3.TabIndex = 18;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -229,6 +235,7 @@ namespace OOP_Calculator
             this.btn2.TabIndex = 17;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -238,6 +245,7 @@ namespace OOP_Calculator
             this.btn1.TabIndex = 16;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // equalsbtn
             // 
@@ -266,6 +274,7 @@ namespace OOP_Calculator
             this.btn0.TabIndex = 21;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // signbtn
             // 
@@ -276,21 +285,20 @@ namespace OOP_Calculator
             this.signbtn.Text = "+/-";
             this.signbtn.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // txtbxOutput
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(454, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
+            this.txtbxOutput.Location = new System.Drawing.Point(11, 108);
+            this.txtbxOutput.Name = "txtbxOutput";
+            this.txtbxOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtbxOutput.Size = new System.Drawing.Size(500, 23);
+            this.txtbxOutput.TabIndex = 24;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 572);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtbxOutput);
             this.Controls.Add(this.equalsbtn);
             this.Controls.Add(this.decimalbtn);
             this.Controls.Add(this.btn0);
@@ -349,7 +357,7 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button decimalbtn;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button signbtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbxOutput;
     }
 }
 

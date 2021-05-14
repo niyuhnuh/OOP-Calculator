@@ -34,12 +34,57 @@ namespace OOP_Calculator
 
         private void button11_Click(object sender, EventArgs e)
         {
-
+            txtbxOutput.Text = txtbxOutput.Text + "8";
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "1";
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "2";
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "3";
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "4";
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "5";
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "6";
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "7";
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "9";
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + "0";
         }
     }
 }
