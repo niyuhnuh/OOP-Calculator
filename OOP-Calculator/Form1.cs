@@ -86,5 +86,15 @@ namespace OOP_Calculator
         {
             txtbxOutput.Text = txtbxOutput.Text + "0";
         }
+
+        private void txtbxOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void decimalbtn_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = txtbxOutput.Text + ".";
+        }
     }
 }
