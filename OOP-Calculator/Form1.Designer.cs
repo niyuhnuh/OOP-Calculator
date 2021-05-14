@@ -59,86 +59,99 @@ namespace OOP_Calculator
             // 
             // percentbtn
             // 
+            this.percentbtn.BackColor = System.Drawing.SystemColors.Control;
             this.percentbtn.Location = new System.Drawing.Point(12, 146);
             this.percentbtn.Name = "percentbtn";
             this.percentbtn.Size = new System.Drawing.Size(119, 61);
             this.percentbtn.TabIndex = 0;
             this.percentbtn.Text = "%";
-            this.percentbtn.UseVisualStyleBackColor = true;
+            this.percentbtn.UseVisualStyleBackColor = false;
             // 
             // clearentrybtn
             // 
+            this.clearentrybtn.BackColor = System.Drawing.SystemColors.Control;
             this.clearentrybtn.Location = new System.Drawing.Point(137, 146);
             this.clearentrybtn.Name = "clearentrybtn";
             this.clearentrybtn.Size = new System.Drawing.Size(119, 61);
             this.clearentrybtn.TabIndex = 1;
             this.clearentrybtn.Text = "CE";
-            this.clearentrybtn.UseVisualStyleBackColor = true;
+            this.clearentrybtn.UseVisualStyleBackColor = false;
+            this.clearentrybtn.Click += new System.EventHandler(this.clearentrybtn_Click);
             // 
             // clearallbtn
             // 
+            this.clearallbtn.BackColor = System.Drawing.SystemColors.Control;
             this.clearallbtn.Location = new System.Drawing.Point(262, 146);
             this.clearallbtn.Name = "clearallbtn";
             this.clearallbtn.Size = new System.Drawing.Size(119, 61);
             this.clearallbtn.TabIndex = 2;
             this.clearallbtn.Text = "C";
-            this.clearallbtn.UseVisualStyleBackColor = true;
+            this.clearallbtn.UseVisualStyleBackColor = false;
+            this.clearallbtn.Click += new System.EventHandler(this.clearallbtn_Click);
             // 
             // backspacebtn
             // 
+            this.backspacebtn.BackColor = System.Drawing.SystemColors.Control;
             this.backspacebtn.Location = new System.Drawing.Point(387, 146);
             this.backspacebtn.Name = "backspacebtn";
             this.backspacebtn.Size = new System.Drawing.Size(119, 61);
             this.backspacebtn.TabIndex = 3;
             this.backspacebtn.Text = "<-";
-            this.backspacebtn.UseVisualStyleBackColor = true;
+            this.backspacebtn.UseVisualStyleBackColor = false;
             this.backspacebtn.Click += new System.EventHandler(this.button4_Click);
             // 
             // dividebtn
             // 
+            this.dividebtn.BackColor = System.Drawing.SystemColors.Control;
             this.dividebtn.Location = new System.Drawing.Point(387, 213);
             this.dividebtn.Name = "dividebtn";
             this.dividebtn.Size = new System.Drawing.Size(119, 61);
             this.dividebtn.TabIndex = 7;
             this.dividebtn.Text = "/";
-            this.dividebtn.UseVisualStyleBackColor = true;
+            this.dividebtn.UseVisualStyleBackColor = false;
+            this.dividebtn.Click += new System.EventHandler(this.dividebtn_Click);
             // 
             // rootbtn
             // 
+            this.rootbtn.BackColor = System.Drawing.SystemColors.Control;
             this.rootbtn.Location = new System.Drawing.Point(262, 213);
             this.rootbtn.Name = "rootbtn";
             this.rootbtn.Size = new System.Drawing.Size(119, 61);
             this.rootbtn.TabIndex = 6;
             this.rootbtn.Text = "sqrt()";
-            this.rootbtn.UseVisualStyleBackColor = true;
+            this.rootbtn.UseVisualStyleBackColor = false;
             // 
             // squarebtn
             // 
+            this.squarebtn.BackColor = System.Drawing.SystemColors.Control;
             this.squarebtn.Location = new System.Drawing.Point(137, 213);
             this.squarebtn.Name = "squarebtn";
             this.squarebtn.Size = new System.Drawing.Size(119, 61);
             this.squarebtn.TabIndex = 5;
             this.squarebtn.Text = "𝑥^2";
-            this.squarebtn.UseVisualStyleBackColor = true;
+            this.squarebtn.UseVisualStyleBackColor = false;
             this.squarebtn.Click += new System.EventHandler(this.button7_Click);
             // 
             // fractionbtn
             // 
+            this.fractionbtn.BackColor = System.Drawing.SystemColors.Control;
             this.fractionbtn.Location = new System.Drawing.Point(12, 213);
             this.fractionbtn.Name = "fractionbtn";
             this.fractionbtn.Size = new System.Drawing.Size(119, 61);
             this.fractionbtn.TabIndex = 4;
             this.fractionbtn.Text = "1/𝑥";
-            this.fractionbtn.UseVisualStyleBackColor = true;
+            this.fractionbtn.UseVisualStyleBackColor = false;
             // 
             // multiplybtn
             // 
+            this.multiplybtn.BackColor = System.Drawing.SystemColors.Control;
             this.multiplybtn.Location = new System.Drawing.Point(387, 280);
             this.multiplybtn.Name = "multiplybtn";
             this.multiplybtn.Size = new System.Drawing.Size(119, 61);
             this.multiplybtn.TabIndex = 11;
             this.multiplybtn.Text = "*";
-            this.multiplybtn.UseVisualStyleBackColor = true;
+            this.multiplybtn.UseVisualStyleBackColor = false;
+            this.multiplybtn.Click += new System.EventHandler(this.multiplybtn_Click);
             // 
             // btn9
             // 
@@ -175,12 +188,14 @@ namespace OOP_Calculator
             // 
             // subtractbtn
             // 
+            this.subtractbtn.BackColor = System.Drawing.SystemColors.Control;
             this.subtractbtn.Location = new System.Drawing.Point(387, 347);
             this.subtractbtn.Name = "subtractbtn";
             this.subtractbtn.Size = new System.Drawing.Size(119, 61);
             this.subtractbtn.TabIndex = 15;
             this.subtractbtn.Text = "-";
-            this.subtractbtn.UseVisualStyleBackColor = true;
+            this.subtractbtn.UseVisualStyleBackColor = false;
+            this.subtractbtn.Click += new System.EventHandler(this.subtractbtn_Click);
             // 
             // btn6
             // 
@@ -224,6 +239,7 @@ namespace OOP_Calculator
             this.additionbtn.TabIndex = 19;
             this.additionbtn.Text = "+";
             this.additionbtn.UseVisualStyleBackColor = false;
+            this.additionbtn.Click += new System.EventHandler(this.additionbtn_Click);
             // 
             // btn3
             // 
@@ -304,24 +320,30 @@ namespace OOP_Calculator
             this.signbtn.TabIndex = 20;
             this.signbtn.Text = "+/-";
             this.signbtn.UseVisualStyleBackColor = false;
+            this.signbtn.Click += new System.EventHandler(this.signbtn_Click);
             // 
             // txtbxOutput
             // 
-            this.txtbxOutput.Location = new System.Drawing.Point(11, 108);
+            this.txtbxOutput.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtbxOutput.Location = new System.Drawing.Point(12, 94);
             this.txtbxOutput.Name = "txtbxOutput";
             this.txtbxOutput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtbxOutput.Size = new System.Drawing.Size(500, 23);
+            this.txtbxOutput.Size = new System.Drawing.Size(494, 46);
             this.txtbxOutput.TabIndex = 24;
+            this.txtbxOutput.Text = "0";
             this.txtbxOutput.TextChanged += new System.EventHandler(this.txtbxOutput_TextChanged);
             this.txtbxOutput.MouseHover += new System.EventHandler(this.btn0_Click);
             // 
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(19, 55);
+            this.lblOutput.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblOutput.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblOutput.Location = new System.Drawing.Point(12, 48);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(0, 18);
+            this.lblOutput.Size = new System.Drawing.Size(25, 43);
             this.lblOutput.TabIndex = 25;
+            this.lblOutput.Text = "0";
             this.lblOutput.UseCompatibleTextRendering = true;
             // 
             // Form1
