@@ -19,6 +19,16 @@ namespace OOP_Calculator
             InitializeComponent();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ers(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            txtbxOutput.Text = txtbxOutput.Text + button.Text;
+
+        }
     }
 }
