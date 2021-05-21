@@ -30,5 +30,17 @@ namespace OOP_Calculator
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
 
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    
     }
 }
