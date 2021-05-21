@@ -180,6 +180,7 @@ namespace OOP_Calculator
             this.clear_Btn.TabIndex = 22;
             this.clear_Btn.Text = "C";
             this.clear_Btn.UseVisualStyleBackColor = true;
+            this.clear_Btn.Click += new System.EventHandler(this.clear_Btn_Click);
             // 
             // ce_btn
             // 
@@ -245,6 +246,7 @@ namespace OOP_Calculator
             this.back_Btn.TabIndex = 27;
             this.back_Btn.Text = "<-";
             this.back_Btn.UseVisualStyleBackColor = true;
+            this.back_Btn.Click += new System.EventHandler(this.back_Btn_Click);
             // 
             // dec_Btn
             // 

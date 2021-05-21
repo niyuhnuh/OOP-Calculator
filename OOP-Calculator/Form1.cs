@@ -12,7 +12,7 @@ namespace OOP_Calculator
 {
     public partial class Form1 : Form
     {
-
+        Double value = 0;  
         
         public Form1()
         {
@@ -26,6 +26,9 @@ namespace OOP_Calculator
 
         private void ers(object sender, EventArgs e)
         {
+            if (txtbxOutput.Text == "0")
+                txtbxOutput.Clear();
+
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
 
@@ -41,6 +44,25 @@ namespace OOP_Calculator
 
         }
 
-    
+        private void clear_Btn_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Clear();
+            txtbxOutput.Text = "0";
+            value = 0; 
+        }
+
+        private void back_Btn_Click(object sender, EventArgs e)
+        {
+            int len = txtbxOutput.TextLength - 1;
+            string val = txtbxOutput.Text;
+            txtbxOutput.Clear();
+            for (int i = 0; i < len; i++)
+                txtbxOutput.Text = txtbxOutput.Text + val[i];
+
+            if (len < 1)
+                txtbxOutput.Text = "0";
+                
+
+        }
     }
 }
