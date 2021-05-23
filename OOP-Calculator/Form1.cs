@@ -24,16 +24,6 @@ namespace OOP_Calculator
 
         }
 
-        private void ers(object sender, EventArgs e)
-        {
-            if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
-            Button button = (Button)sender;
-            txtbxOutput.Text = txtbxOutput.Text + button.Text;
-
-        }
-
         private void button13_Click(object sender, EventArgs e)
         {
 
@@ -61,7 +51,16 @@ namespace OOP_Calculator
 
             if (len < 1)
                 txtbxOutput.Text = "0";
-                
+               
+        }
+
+        private void numBtn_click(object sender, EventArgs e)
+        {
+            if (txtbxOutput.Text == "0")
+                txtbxOutput.Clear();
+
+            Button button = (Button)sender;
+            txtbxOutput.Text = txtbxOutput.Text + button.Text;
 
         }
     }

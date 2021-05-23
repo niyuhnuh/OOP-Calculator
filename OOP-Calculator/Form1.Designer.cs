@@ -71,7 +71,7 @@ namespace OOP_Calculator
             this.btn3.TabIndex = 8;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.ers);
+            this.btn3.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn2
             // 
@@ -81,7 +81,7 @@ namespace OOP_Calculator
             this.btn2.TabIndex = 11;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.ers);
+            this.btn2.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn1
             // 
@@ -91,7 +91,7 @@ namespace OOP_Calculator
             this.btn1.TabIndex = 10;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.ers);
+            this.btn1.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn5
             // 
@@ -101,7 +101,7 @@ namespace OOP_Calculator
             this.btn5.TabIndex = 14;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.ers);
+            this.btn5.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn4
             // 
@@ -111,7 +111,7 @@ namespace OOP_Calculator
             this.btn4.TabIndex = 13;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.ers);
+            this.btn4.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn6
             // 
@@ -121,7 +121,7 @@ namespace OOP_Calculator
             this.btn6.TabIndex = 12;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.ers);
+            this.btn6.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn8
             // 
@@ -131,7 +131,7 @@ namespace OOP_Calculator
             this.btn8.TabIndex = 17;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
-            this.btn8.Click += new System.EventHandler(this.ers);
+            this.btn8.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn7
             // 
@@ -141,7 +141,7 @@ namespace OOP_Calculator
             this.btn7.TabIndex = 16;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.ers);
+            this.btn7.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn9
             // 
@@ -151,7 +151,7 @@ namespace OOP_Calculator
             this.btn9.TabIndex = 15;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.ers);
+            this.btn9.Click += new System.EventHandler(this.numBtn_click);
             // 
             // btn0
             // 
@@ -161,7 +161,7 @@ namespace OOP_Calculator
             this.btn0.TabIndex = 18;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
-            this.btn0.Click += new System.EventHandler(this.ers);
+            this.btn0.Click += new System.EventHandler(this.numBtn_click);
             // 
             // txtbxOutput
             // 
@@ -256,7 +256,7 @@ namespace OOP_Calculator
             this.dec_Btn.TabIndex = 28;
             this.dec_Btn.Text = ".";
             this.dec_Btn.UseVisualStyleBackColor = true;
-            this.dec_Btn.Click += new System.EventHandler(this.ers);
+            this.dec_Btn.Click += new System.EventHandler(this.numBtn_click);
             // 
             // label1
             // 
