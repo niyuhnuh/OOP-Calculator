@@ -199,7 +199,7 @@ namespace OOP_Calculator
             this.add_Sign.TabIndex = 20;
             this.add_Sign.Text = "+";
             this.add_Sign.UseVisualStyleBackColor = true;
-            this.add_Sign.Click += new System.EventHandler(this.button13_Click);
+            this.add_Sign.Click += new System.EventHandler(this.add_Sign_Click);
             // 
             // sub_Sign
             // 
@@ -209,6 +209,7 @@ namespace OOP_Calculator
             this.sub_Sign.TabIndex = 23;
             this.sub_Sign.Text = "-";
             this.sub_Sign.UseVisualStyleBackColor = true;
+            this.sub_Sign.Click += new System.EventHandler(this.sub_Sign_Click);
             // 
             // mul_Sign
             // 
@@ -218,7 +219,7 @@ namespace OOP_Calculator
             this.mul_Sign.TabIndex = 24;
             this.mul_Sign.Text = "*";
             this.mul_Sign.UseVisualStyleBackColor = true;
-            this.mul_Sign.Click += new System.EventHandler(this.button15_Click);
+            this.mul_Sign.Click += new System.EventHandler(this.mul_Sign_Click);
             // 
             // div_Sign
             // 
@@ -228,6 +229,7 @@ namespace OOP_Calculator
             this.div_Sign.TabIndex = 25;
             this.div_Sign.Text = "/";
             this.div_Sign.UseVisualStyleBackColor = true;
+            this.div_Sign.Click += new System.EventHandler(this.div_Sign_Click);
             // 
             // equals_Btn
             // 

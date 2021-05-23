@@ -19,20 +19,6 @@ namespace OOP_Calculator
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void clear_Btn_Click(object sender, EventArgs e)
         {
@@ -61,6 +47,26 @@ namespace OOP_Calculator
 
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
+
+        }
+
+        private void add_Sign_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sub_Sign_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mul_Sign_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void div_Sign_Click(object sender, EventArgs e)
+        {
 
         }
     }
