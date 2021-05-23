@@ -78,5 +78,10 @@ namespace OOP_Calculator
             input1 = Double.Parse(txtbxOutput.Text);
             txtbxOutput.Clear();
         }
+
+        private void ce_btn_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = "0";
+        }
     }
 }

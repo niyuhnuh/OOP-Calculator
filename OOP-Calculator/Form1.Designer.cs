@@ -190,6 +190,7 @@ namespace OOP_Calculator
             this.ce_btn.TabIndex = 21;
             this.ce_btn.Text = "CE";
             this.ce_btn.UseVisualStyleBackColor = true;
+            this.ce_btn.Click += new System.EventHandler(this.ce_btn_Click);
             // 
             // add_Sign
             // 
