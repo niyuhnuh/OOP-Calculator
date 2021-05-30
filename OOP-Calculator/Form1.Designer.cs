@@ -260,7 +260,7 @@ namespace OOP_Calculator
             this.dec_Btn.TabIndex = 28;
             this.dec_Btn.Text = ".";
             this.dec_Btn.UseVisualStyleBackColor = true;
-            this.dec_Btn.Click += new System.EventHandler(this.numBtn_click);
+            this.dec_Btn.Click += new System.EventHandler(this.decBtn_click);
             // 
             // label1
             // 

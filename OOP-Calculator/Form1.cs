@@ -131,5 +131,18 @@ namespace OOP_Calculator
 
 
         }
+
+        private void decBtn_click(object sender, EventArgs e)
+        {
+            if (!txtbxOutput.Text.Contains("."))
+            {
+                txtbxOutput.Text = txtbxOutput.Text + dec_Btn.Text;
+            }
+            else if (txtbxOutput.Text.Contains("."))
+            {
+                txtbxOutput.Text = txtbxOutput.Text;
+            }
+
+        }
     }
 }
