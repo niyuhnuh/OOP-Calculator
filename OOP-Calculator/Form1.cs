@@ -60,6 +60,7 @@ namespace OOP_Calculator
 
         private void sub_Sign_Click(object sender, EventArgs e)
         {
+
             operatorUse = sub_Sign.Text;
             input1 = Double.Parse(txtbxOutput.Text);
             txtbxOutput.Text = "0";
@@ -86,6 +87,39 @@ namespace OOP_Calculator
 
         private void equals_Btn_Click(object sender, EventArgs e)
         {
+            double input2;
+            double answer;
+
+            input2 = Double.Parse(txtbxOutput.Text);
+
+            switch(operatorUse)
+            {
+                case "+":
+                    answer = (input1 + input2);
+                    txtbxOutput.Text = answer.ToString();
+                    input1 = answer;
+                    break;
+                case "-":
+                    answer = (input1 - input2);
+                    txtbxOutput.Text = answer.ToString();
+                    input1 = answer;
+                    break;
+                case "*":
+                    answer = (input1 * input2);
+                    txtbxOutput.Text = answer.ToString();
+                    input1 = answer;
+                    break;
+                case "/":
+                    if (input2 == 0)
+                    {
+                        MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
+                    }
+                    break;
+
+            }
+             
+
+
 
         }
     }
