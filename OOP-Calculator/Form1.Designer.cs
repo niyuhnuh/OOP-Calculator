@@ -240,6 +240,7 @@ namespace OOP_Calculator
             this.equals_Btn.TabIndex = 26;
             this.equals_Btn.Text = "=";
             this.equals_Btn.UseVisualStyleBackColor = true;
+            this.equals_Btn.Click += new System.EventHandler(this.equals_Btn_Click);
             // 
             // back_Btn
             // 

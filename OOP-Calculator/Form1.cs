@@ -62,26 +62,31 @@ namespace OOP_Calculator
         {
             operatorUse = sub_Sign.Text;
             input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Clear();
+            txtbxOutput.Text = "0";
         }
 
         private void mul_Sign_Click(object sender, EventArgs e)
         {
             operatorUse = mul_Sign.Text;
             input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Clear();
+            txtbxOutput.Text = "0";
         }
 
         private void div_Sign_Click(object sender, EventArgs e)
         {
             operatorUse = div_Sign.Text;
             input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Clear();
+            txtbxOutput.Text = "0";
         }
 
         private void ce_btn_Click(object sender, EventArgs e)
         {
             txtbxOutput.Text = "0";
+        }
+
+        private void equals_Btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
