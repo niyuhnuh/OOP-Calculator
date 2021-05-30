@@ -113,6 +113,15 @@ namespace OOP_Calculator
                     if (input2 == 0)
                     {
                         MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
+                        txtbxOutput.Clear();
+                        txtbxOutput.Text = "0";
+                        input1 = 0;
+                    }
+                    else
+                    {
+                        answer = (input1 / input2);
+                        txtbxOutput.Text = answer.ToString();
+                        input1 = answer;
                     }
                     break;
 
