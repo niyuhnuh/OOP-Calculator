@@ -36,7 +36,7 @@ namespace OOP_Calculator
             txtbxOutput.Clear();
             for (int i = 0; i < len; i++)
                 txtbxOutput.Text = txtbxOutput.Text + val[i];
-                lbl_View.Text = txtbxOutput.Text
+                lbl_View.Text = txtbxOutput.Text;
 
             if (len < 1)
                 txtbxOutput.Text = "0";
@@ -51,6 +51,7 @@ namespace OOP_Calculator
 
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
+            lbl_View.Text = txtbxOutput.Text;
 
         }
 
@@ -98,6 +99,7 @@ namespace OOP_Calculator
             double answer;
 
             input2 = Double.Parse(txtbxOutput.Text);
+            lbl_View.Text = lbl_View.Text + input2;
 
             switch(operatorUse)
             {
