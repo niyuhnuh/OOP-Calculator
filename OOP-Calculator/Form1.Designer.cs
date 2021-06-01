@@ -50,7 +50,7 @@ namespace OOP_Calculator
             this.equals_Btn = new System.Windows.Forms.Button();
             this.back_Btn = new System.Windows.Forms.Button();
             this.dec_Btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_View = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -262,22 +262,22 @@ namespace OOP_Calculator
             this.dec_Btn.UseVisualStyleBackColor = true;
             this.dec_Btn.Click += new System.EventHandler(this.decBtn_click);
             // 
-            // label1
+            // lbl_View
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(15, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 15);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "0";
+            this.lbl_View.AutoSize = true;
+            this.lbl_View.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_View.Location = new System.Drawing.Point(15, 24);
+            this.lbl_View.Name = "lbl_View";
+            this.lbl_View.Size = new System.Drawing.Size(13, 15);
+            this.lbl_View.TabIndex = 29;
+            this.lbl_View.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 327);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_View);
             this.Controls.Add(this.dec_Btn);
             this.Controls.Add(this.back_Btn);
             this.Controls.Add(this.equals_Btn);
@@ -328,7 +328,7 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button equals_Btn;
         private System.Windows.Forms.Button back_Btn;
         private System.Windows.Forms.Button dec_Btn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_View;
     }
 }
 
