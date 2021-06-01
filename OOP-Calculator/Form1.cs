@@ -65,12 +65,7 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
-            else if (operatorUse != "+")
-            {
-                equals_Btn.PerformClick();
-                lbl_View.Text = input1.ToString();
-                txtbxOutput.Text = input1.ToString(); 
-            }
+            
             else
             {
                 operatorUse = add_Sign.Text;
@@ -91,6 +86,7 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }
+          
             else
             {
                 operatorUse = sub_Sign.Text;
@@ -110,6 +106,7 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
             }
+         
             else
             {
                 operatorUse = mul_Sign.Text;
@@ -129,6 +126,7 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
+          
             else
             {
                 operatorUse = div_Sign.Text;
