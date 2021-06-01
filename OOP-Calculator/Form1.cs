@@ -95,28 +95,35 @@ namespace OOP_Calculator
 
         private void equals_Btn_Click(object sender, EventArgs e)
         {
-            double input2;
+            
             double answer;
+            double input2;
+            
 
             input2 = Double.Parse(txtbxOutput.Text);
-            lbl_View.Text = lbl_View.Text + input2;
 
             switch(operatorUse)
             {
                 case "+":
                     answer = (input1 + input2);
+                    string a = input2.ToString();
+                    lbl_View.Text = lbl_View.Text + a;
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
                     break;
                 case "-":
                     answer = (input1 - input2);
+                    string b = input2.ToString();
+                    lbl_View.Text = lbl_View.Text + b;
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
                     break;
                 case "*":
                     answer = (input1 * input2);
+                    string c = input2.ToString();
+                    lbl_View.Text = lbl_View.Text + c;
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
@@ -133,6 +140,8 @@ namespace OOP_Calculator
                     else
                     {
                         answer = (input1 / input2);
+                        string d = input2.ToString();
+                        lbl_View.Text = lbl_View.Text + d;
                         txtbxOutput.Text = answer.ToString();
                         input1 = answer;
                         lbl_View.Text = txtbxOutput.Text;
@@ -156,5 +165,6 @@ namespace OOP_Calculator
             }
 
         }
+
     }
 }
