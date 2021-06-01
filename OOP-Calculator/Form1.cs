@@ -14,6 +14,7 @@ namespace OOP_Calculator
     {
         Double input1 = 0;
         String operatorUse = ""; 
+
         
         public Form1()
         {
@@ -57,35 +58,79 @@ namespace OOP_Calculator
 
         private void add_Sign_Click(object sender, EventArgs e)
         {
-            operatorUse = add_Sign.Text;
-            input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Clear();
-            lbl_View.Text = lbl_View.Text + add_Sign.Text;
+            if (input1 != 0)
+            {
+                equals_Btn.PerformClick();
+                operatorUse = add_Sign.Text;
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + add_Sign.Text;
+            }
+            else 
+            {
+                operatorUse = add_Sign.Text;
+                input1 = Double.Parse(txtbxOutput.Text);
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + add_Sign.Text;
+
+            }
+            
         }
 
         private void sub_Sign_Click(object sender, EventArgs e)
         {
+            if (input1 != 0)
+            {
+                equals_Btn.PerformClick();
+                operatorUse = sub_Sign.Text;
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + add_Sign.Text;
+            }
+            else
+            {
+                operatorUse = sub_Sign.Text;
+                input1 = Double.Parse(txtbxOutput.Text);
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + sub_Sign.Text;
 
-            operatorUse = sub_Sign.Text;
-            input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Text = "0";
-            lbl_View.Text = lbl_View.Text + sub_Sign.Text;
+            }
         }
 
         private void mul_Sign_Click(object sender, EventArgs e)
         {
-            operatorUse = mul_Sign.Text;
-            input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Text = "0";
-            lbl_View.Text = lbl_View.Text + mul_Sign.Text;
+            if (input1 != 0)
+            {
+                equals_Btn.PerformClick();
+                operatorUse = mul_Sign.Text;
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + mul_Sign.Text;
+            }
+            else
+            {
+                operatorUse = mul_Sign.Text;
+                input1 = Double.Parse(txtbxOutput.Text);
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + mul_Sign.Text;
+
+            }
         }
 
         private void div_Sign_Click(object sender, EventArgs e)
         {
-            operatorUse = div_Sign.Text;
-            input1 = Double.Parse(txtbxOutput.Text);
-            txtbxOutput.Text = "0";
-            lbl_View.Text = lbl_View.Text + div_Sign.Text;
+            if (input1 != 0)
+            {
+                equals_Btn.PerformClick();
+                operatorUse = div_Sign.Text;
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + div_Sign.Text;
+            }
+            else
+            {
+                operatorUse = div_Sign.Text;
+                input1 = Double.Parse(txtbxOutput.Text);
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + div_Sign.Text;
+
+            }
         }
 
         private void ce_btn_Click(object sender, EventArgs e)
@@ -98,13 +143,10 @@ namespace OOP_Calculator
             
             double answer;
             double input2;
-            
+
             input2 = Double.Parse(txtbxOutput.Text);
 
-            string a = input2.ToString();
-            lbl_View.Text = lbl_View.Text + a;
-
-            switch(operatorUse)
+            switch (operatorUse)
             {
                 case "+":
                     answer = (input1 + input2);
@@ -141,7 +183,6 @@ namespace OOP_Calculator
                         lbl_View.Text = txtbxOutput.Text;
                     }
                     break;
-
             }
         }
 
@@ -159,6 +200,7 @@ namespace OOP_Calculator
             }
 
         }
-
+        
+    
     }
 }
