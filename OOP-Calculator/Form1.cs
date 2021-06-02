@@ -66,11 +66,6 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
 
-            else if (lbl_View.Text == txtbxOutput.Text)
-            {
-                thePreviousOp();
-            }
-
             else
             {
                 operatorUse = add_Sign.Text;
@@ -154,34 +149,31 @@ namespace OOP_Calculator
             
             double answer;
             double input2;
-            double input3;
+           
 
             input2 = Double.Parse(txtbxOutput.Text);
 
-            input3 = input1;
+           
             switch (operatorUse)
             {
                 case "+":
-                    answer = (input3 + input2);
-                    txtbxOutput.Text = answer.ToString();
+                    answer = (input1 + input2);
+                    lbl_View.Text = answer.ToString();
                     input1 = answer;
-                    lbl_View.Text = txtbxOutput.Text;
-                    thePreviousOp();
+                    txtbxOutput.Text = "0";
                     break;
                 case "-":
-                    answer = (input3 - input2);
-                    txtbxOutput.Text = answer.ToString();
+                    answer = (input1 - input2);
+                    lbl_View.Text = answer.ToString();
                     input1 = answer;
-                    lbl_View.Text = txtbxOutput.Text;
-                    thePreviousOp();
+                    txtbxOutput.Text = "0";
                     break;
                 case "*":
-                    answer = (input3 * input2);
-                    txtbxOutput.Text = answer.ToString();
+                    answer = (input1 * input2);
+                    lbl_View.Text = answer.ToString();
                     input1 = answer;
-                    lbl_View.Text = txtbxOutput.Text;
-                    thePreviousOp();
-                                        break;
+                    txtbxOutput.Text = "0";
+                    break;
                 case "/":
                     if (input2 == 0)
                     {
@@ -193,11 +185,10 @@ namespace OOP_Calculator
                     }
                     else
                     {
-                        answer = (input3 / input2);
-                        txtbxOutput.Text = answer.ToString();
+                        answer = (input1 / input2);
+                        lbl_View.Text = answer.ToString();
                         input1 = answer;
-                        lbl_View.Text = txtbxOutput.Text;
-                        thePreviousOp();
+                        txtbxOutput.Text = "0";
                     }
                     break;
             }
@@ -218,18 +209,6 @@ namespace OOP_Calculator
 
         }
         
-        private void thePreviousOp()
-        {
-            double a;
-            a = input1 - input1;
-
-            lbl_View.Text = a.ToString();
-
-            equals_Btn.PerformClick();
-            operatorUse = add_Sign.Text;
-            txtbxOutput.Clear();
-
-        }
-    
+      
     }
 }
