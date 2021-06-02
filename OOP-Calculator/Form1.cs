@@ -66,6 +66,7 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
             
+         
             else
             {
                 operatorUse = add_Sign.Text;
@@ -148,25 +149,27 @@ namespace OOP_Calculator
             
             double answer;
             double input2;
+            double input3;
 
             input2 = Double.Parse(txtbxOutput.Text);
 
+            input3 = input1;
             switch (operatorUse)
             {
                 case "+":
-                    answer = (input1 + input2);
+                    answer = (input3 + input2);
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
                     break;
                 case "-":
-                    answer = (input1 - input2);
+                    answer = (input3 - input2);
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
                     break;
                 case "*":
-                    answer = (input1 * input2);
+                    answer = (input3 * input2);
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
@@ -182,7 +185,7 @@ namespace OOP_Calculator
                     }
                     else
                     {
-                        answer = (input1 / input2);
+                        answer = (input3 / input2);
                         txtbxOutput.Text = answer.ToString();
                         input1 = answer;
                         lbl_View.Text = txtbxOutput.Text;
