@@ -65,8 +65,12 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
-            
-         
+
+            else if (lbl_View.Text == txtbxOutput.Text)
+            {
+                thePreviousOp();
+            }
+
             else
             {
                 operatorUse = add_Sign.Text;
@@ -88,6 +92,7 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }
           
+            
             else
             {
                 operatorUse = sub_Sign.Text;
@@ -161,19 +166,22 @@ namespace OOP_Calculator
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
+                    thePreviousOp();
                     break;
                 case "-":
                     answer = (input3 - input2);
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
+                    thePreviousOp();
                     break;
                 case "*":
                     answer = (input3 * input2);
                     txtbxOutput.Text = answer.ToString();
                     input1 = answer;
                     lbl_View.Text = txtbxOutput.Text;
-                    break;
+                    thePreviousOp();
+                                        break;
                 case "/":
                     if (input2 == 0)
                     {
@@ -189,6 +197,7 @@ namespace OOP_Calculator
                         txtbxOutput.Text = answer.ToString();
                         input1 = answer;
                         lbl_View.Text = txtbxOutput.Text;
+                        thePreviousOp();
                     }
                     break;
             }
@@ -209,6 +218,18 @@ namespace OOP_Calculator
 
         }
         
+        private void thePreviousOp()
+        {
+            double a;
+            a = input1 - input1;
+
+            lbl_View.Text = a.ToString();
+
+            equals_Btn.PerformClick();
+            operatorUse = add_Sign.Text;
+            txtbxOutput.Clear();
+
+        }
     
     }
 }
