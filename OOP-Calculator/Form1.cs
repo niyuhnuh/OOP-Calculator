@@ -196,12 +196,7 @@ namespace OOP_Calculator
                         break;
                 }
             }
-            
-
-
-            
-           
-        }//end
+        }
 
         private void decBtn_click(object sender, EventArgs e)
         {
@@ -215,7 +210,6 @@ namespace OOP_Calculator
                 txtbxOutput.Text = txtbxOutput.Text;
                 lbl_View.Text = txtbxOutput.Text;
             }
-
         }
         
       
