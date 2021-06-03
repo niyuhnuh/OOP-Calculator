@@ -146,12 +146,12 @@ namespace OOP_Calculator
 
         private void equals_Btn_Click(object sender, EventArgs e)
         {
-            
-            double answer;
-            double input2 = 1;
 
-            
-            input2 = Double.Parse(txtbxOutput.Text);
+            double answer;
+            double input2;
+
+
+            input2 = (Double.Parse(txtbxOutput.Text)) * 1;
 
                 switch (operatorUse)
                 {
