@@ -190,7 +190,7 @@ namespace OOP_Calculator
                         answer = (input1 / input2);
                         lbl_View.Text = answer.ToString();
                         input1 = answer;
-                        txtbxOutput.Text = "1";
+                        txtbxOutput.Clear();
                     }
                     break;
             }
