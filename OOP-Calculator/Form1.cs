@@ -149,9 +149,11 @@ namespace OOP_Calculator
             
             double answer;
             double input2;
-           
 
+       
+            
             input2 = Double.Parse(txtbxOutput.Text);
+
 
            
             switch (operatorUse)
@@ -188,7 +190,7 @@ namespace OOP_Calculator
                         answer = (input1 / input2);
                         lbl_View.Text = answer.ToString();
                         input1 = answer;
-                        txtbxOutput.Text = "0";
+                        txtbxOutput.Text = "1";
                     }
                     break;
             }
