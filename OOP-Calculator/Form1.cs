@@ -150,11 +150,19 @@ namespace OOP_Calculator
             double answer;
             double input2;
 
+            try
+            {
+                input2 = Double.Parse(txtbxOutput.Text);
+            }
 
-            input2 = (Double.Parse(txtbxOutput.Text)) * 1;
+            catch { }
 
+            finally 
+            {
+                input2 = Double.Parse(txtbxOutput.Text);
                 switch (operatorUse)
                 {
+                    
                     case "+":
                         answer = (input1 + input2);
                         lbl_View.Text = answer.ToString();
@@ -181,6 +189,7 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             input1 = 0;
                             lbl_View.Text = txtbxOutput.Text;
+
                         }
                         else
                         {
@@ -188,17 +197,15 @@ namespace OOP_Calculator
                             lbl_View.Text = answer.ToString();
                             input1 = answer;
                             txtbxOutput.Clear();
+
                         }
                         break;
                 }
+            }
 
-            
 
            
-
-            
-           
-        }
+        }//end
 
         private void decBtn_click(object sender, EventArgs e)
         {
