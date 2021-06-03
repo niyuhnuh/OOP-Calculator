@@ -149,14 +149,22 @@ namespace OOP_Calculator
 
             double answer;
             double input2;
-            input2 = Double.Parse(txtbxOutput.Text);
 
-
-            switch (operatorUse)
+            try
             {
-                    
+                input2 = Double.Parse(txtbxOutput.Text);
+            }
+            catch(System.FormatException)
+            {
+                input2 = Double.Parse(txtbxOutput.Text) + 1;
+            }
+            finally
+            {
+                switch (operatorUse)
+                {
+
                     case "+":
-                        answer = (input1 + input2);
+                        answer = input1 + input2;
                         lbl_View.Text = answer.ToString();
                         input1 = answer;
                         txtbxOutput.Text = "0";
@@ -174,27 +182,34 @@ namespace OOP_Calculator
                         txtbxOutput.Text = "0";
                         break;
                     case "/":
-                       if (input2 == 0 && operatorUse != "+" && operatorUse != "-" && operatorUse = "*")
-                       {
+                        if (input2 != 0)
+                        {
+                            answer = (input1 / input2);
+                            lbl_View.Text = answer.ToString();
+                            input1 = input2;
+                            txtbxOutput.Clear();
+
+                        }
+                        else
+                        {
+
                             MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
                             txtbxOutput.Clear();
                             txtbxOutput.Text = "0";
                             input1 = 0;
                             lbl_View.Text = txtbxOutput.Text;
 
-                       }
-                       else
-                       { 
-                            answer = (input1 / input2);
-                            lbl_View.Text = answer.ToString();
-                            input1 = answer;
-                            txtbxOutput.Clear();
 
-                       }
-                        
+                        }
+
                         break;
 
+                }
             }
+            
+
+
+            
            
         }//end
 
