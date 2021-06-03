@@ -42,8 +42,7 @@ namespace OOP_Calculator
 
             if (len < 1)
                 txtbxOutput.Text = "0";
-                lbl_View.Text = "0";
-               
+                lbl_View.Text = "0";             
         }
 
         private void numBtn_click(object sender, EventArgs e)
@@ -54,7 +53,6 @@ namespace OOP_Calculator
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
             lbl_View.Text = txtbxOutput.Text;
-
         }
 
         private void add_Sign_Click(object sender, EventArgs e)
@@ -73,7 +71,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
-
             }
             
         }
@@ -95,7 +92,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
-
             }
         }
 
@@ -115,7 +111,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
-
             }
         }
 
@@ -135,7 +130,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
-
             }
         }
 
@@ -190,22 +184,16 @@ namespace OOP_Calculator
                             lbl_View.Text = answer.ToString();
                             input1 = answer;
                             txtbxOutput.Clear();
-
                         }
                         else
                         {
-
                             MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
                             txtbxOutput.Clear();
                             txtbxOutput.Text = "0";
                             input1 = 0;
                             lbl_View.Text = txtbxOutput.Text;
-
-
                         }
-
                         break;
-
                 }
             }
             
