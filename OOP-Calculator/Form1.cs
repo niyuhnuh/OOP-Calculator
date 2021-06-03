@@ -13,6 +13,7 @@ namespace OOP_Calculator
     public partial class Form1 : Form
     {
         Double input1 = 0;
+        Double input2;
         String operatorUse = ""; 
 
         
@@ -148,7 +149,7 @@ namespace OOP_Calculator
         {
 
             double answer;
-            double input2;
+
 
             try
             {
@@ -156,10 +157,11 @@ namespace OOP_Calculator
             }
             catch(System.FormatException)
             {
-                input2 = Double.Parse(txtbxOutput.Text) + 1;
+                input2 = 1;
             }
             finally
             {
+
                 switch (operatorUse)
                 {
 
