@@ -188,7 +188,7 @@ namespace OOP_Calculator
                         {
                             answer = (input1 / input2);
                             lbl_View.Text = answer.ToString();
-                            input1 = input2;
+                            input1 = answer;
                             txtbxOutput.Clear();
 
                         }
