@@ -148,7 +148,7 @@ namespace OOP_Calculator
         {
             
             double answer;
-            double input2 = 0;
+            double input2 = 1;
 
             
             input2 = Double.Parse(txtbxOutput.Text);
