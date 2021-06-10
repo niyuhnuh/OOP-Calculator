@@ -211,7 +211,10 @@ namespace OOP_Calculator
                 lbl_View.Text = txtbxOutput.Text;
             }
         }
-        
-      
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

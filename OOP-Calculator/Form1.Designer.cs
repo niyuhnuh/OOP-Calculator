@@ -51,6 +51,15 @@ namespace OOP_Calculator
             this.back_Btn = new System.Windows.Forms.Button();
             this.dec_Btn = new System.Windows.Forms.Button();
             this.lbl_View = new System.Windows.Forms.Label();
+            this.btn_Percent = new System.Windows.Forms.Button();
+            this.btn_MS = new System.Windows.Forms.Button();
+            this.btn_Mplus = new System.Windows.Forms.Button();
+            this.btn_Frac = new System.Windows.Forms.Button();
+            this.btn_Mminus = new System.Windows.Forms.Button();
+            this.btn_MC = new System.Windows.Forms.Button();
+            this.btn_Sqrt = new System.Windows.Forms.Button();
+            this.btn_MR = new System.Windows.Forms.Button();
+            this.btn_PM = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -155,7 +164,7 @@ namespace OOP_Calculator
             // 
             // btn0
             // 
-            this.btn0.Location = new System.Drawing.Point(12, 330);
+            this.btn0.Location = new System.Drawing.Point(67, 330);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(49, 48);
             this.btn0.TabIndex = 18;
@@ -165,7 +174,7 @@ namespace OOP_Calculator
             // 
             // txtbxOutput
             // 
-            this.txtbxOutput.Location = new System.Drawing.Point(12, 46);
+            this.txtbxOutput.Location = new System.Drawing.Point(11, 41);
             this.txtbxOutput.Name = "txtbxOutput";
             this.txtbxOutput.Size = new System.Drawing.Size(214, 23);
             this.txtbxOutput.TabIndex = 19;
@@ -234,9 +243,9 @@ namespace OOP_Calculator
             // 
             // equals_Btn
             // 
-            this.equals_Btn.Location = new System.Drawing.Point(68, 331);
+            this.equals_Btn.Location = new System.Drawing.Point(123, 330);
             this.equals_Btn.Name = "equals_Btn";
-            this.equals_Btn.Size = new System.Drawing.Size(103, 47);
+            this.equals_Btn.Size = new System.Drawing.Size(48, 47);
             this.equals_Btn.TabIndex = 26;
             this.equals_Btn.Text = "=";
             this.equals_Btn.UseVisualStyleBackColor = true;
@@ -266,17 +275,108 @@ namespace OOP_Calculator
             // 
             this.lbl_View.AutoSize = true;
             this.lbl_View.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_View.Location = new System.Drawing.Point(15, 24);
+            this.lbl_View.Location = new System.Drawing.Point(14, 19);
             this.lbl_View.Name = "lbl_View";
             this.lbl_View.Size = new System.Drawing.Size(13, 15);
             this.lbl_View.TabIndex = 29;
             this.lbl_View.Text = "0";
+            // 
+            // btn_Percent
+            // 
+            this.btn_Percent.Location = new System.Drawing.Point(12, 75);
+            this.btn_Percent.Name = "btn_Percent";
+            this.btn_Percent.Size = new System.Drawing.Size(49, 26);
+            this.btn_Percent.TabIndex = 30;
+            this.btn_Percent.Text = "%";
+            this.btn_Percent.UseVisualStyleBackColor = true;
+            // 
+            // btn_MS
+            // 
+            this.btn_MS.Location = new System.Drawing.Point(67, 104);
+            this.btn_MS.Name = "btn_MS";
+            this.btn_MS.Size = new System.Drawing.Size(49, 26);
+            this.btn_MS.TabIndex = 31;
+            this.btn_MS.Text = "MS";
+            this.btn_MS.UseVisualStyleBackColor = true;
+            // 
+            // btn_Mplus
+            // 
+            this.btn_Mplus.Location = new System.Drawing.Point(122, 104);
+            this.btn_Mplus.Name = "btn_Mplus";
+            this.btn_Mplus.Size = new System.Drawing.Size(49, 26);
+            this.btn_Mplus.TabIndex = 33;
+            this.btn_Mplus.Text = "M+";
+            this.btn_Mplus.UseVisualStyleBackColor = true;
+            // 
+            // btn_Frac
+            // 
+            this.btn_Frac.Location = new System.Drawing.Point(67, 75);
+            this.btn_Frac.Name = "btn_Frac";
+            this.btn_Frac.Size = new System.Drawing.Size(49, 26);
+            this.btn_Frac.TabIndex = 32;
+            this.btn_Frac.Text = "1/x";
+            this.btn_Frac.UseVisualStyleBackColor = true;
+            // 
+            // btn_Mminus
+            // 
+            this.btn_Mminus.Location = new System.Drawing.Point(176, 104);
+            this.btn_Mminus.Name = "btn_Mminus";
+            this.btn_Mminus.Size = new System.Drawing.Size(49, 26);
+            this.btn_Mminus.TabIndex = 37;
+            this.btn_Mminus.Text = "M-";
+            this.btn_Mminus.UseVisualStyleBackColor = true;
+            // 
+            // btn_MC
+            // 
+            this.btn_MC.Location = new System.Drawing.Point(177, 75);
+            this.btn_MC.Name = "btn_MC";
+            this.btn_MC.Size = new System.Drawing.Size(49, 26);
+            this.btn_MC.TabIndex = 36;
+            this.btn_MC.Text = "MC";
+            this.btn_MC.UseVisualStyleBackColor = true;
+            // 
+            // btn_Sqrt
+            // 
+            this.btn_Sqrt.Location = new System.Drawing.Point(122, 75);
+            this.btn_Sqrt.Name = "btn_Sqrt";
+            this.btn_Sqrt.Size = new System.Drawing.Size(49, 26);
+            this.btn_Sqrt.TabIndex = 35;
+            this.btn_Sqrt.Text = "sqrt()";
+            this.btn_Sqrt.UseVisualStyleBackColor = true;
+            this.btn_Sqrt.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btn_MR
+            // 
+            this.btn_MR.Location = new System.Drawing.Point(12, 104);
+            this.btn_MR.Name = "btn_MR";
+            this.btn_MR.Size = new System.Drawing.Size(49, 26);
+            this.btn_MR.TabIndex = 34;
+            this.btn_MR.Text = "MR";
+            this.btn_MR.UseVisualStyleBackColor = true;
+            // 
+            // btn_PM
+            // 
+            this.btn_PM.Location = new System.Drawing.Point(12, 329);
+            this.btn_PM.Name = "btn_PM";
+            this.btn_PM.Size = new System.Drawing.Size(49, 48);
+            this.btn_PM.TabIndex = 38;
+            this.btn_PM.Text = "+/-";
+            this.btn_PM.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 392);
+            this.Controls.Add(this.btn_PM);
+            this.Controls.Add(this.btn_Mminus);
+            this.Controls.Add(this.btn_MC);
+            this.Controls.Add(this.btn_Sqrt);
+            this.Controls.Add(this.btn_MR);
+            this.Controls.Add(this.btn_Mplus);
+            this.Controls.Add(this.btn_Frac);
+            this.Controls.Add(this.btn_MS);
+            this.Controls.Add(this.btn_Percent);
             this.Controls.Add(this.lbl_View);
             this.Controls.Add(this.dec_Btn);
             this.Controls.Add(this.back_Btn);
@@ -329,6 +429,15 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button back_Btn;
         private System.Windows.Forms.Button dec_Btn;
         private System.Windows.Forms.Label lbl_View;
+        private System.Windows.Forms.Button btn_Percent;
+        private System.Windows.Forms.Button btn_MS;
+        private System.Windows.Forms.Button btn_Mplus;
+        private System.Windows.Forms.Button btn_Frac;
+        private System.Windows.Forms.Button btn_Mminus;
+        private System.Windows.Forms.Button btn_MC;
+        private System.Windows.Forms.Button btn_Sqrt;
+        private System.Windows.Forms.Button btn_MR;
+        private System.Windows.Forms.Button btn_PM;
     }
 }
 
