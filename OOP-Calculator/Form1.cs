@@ -14,7 +14,8 @@ namespace OOP_Calculator
     {
         Double input1 = 0;
         Double input2;
-        String operatorUse = ""; 
+        String operatorUse = "";
+        bool percentIsClicked = false;
 
         
         public Form1()
@@ -160,6 +161,18 @@ namespace OOP_Calculator
                 {
 
                     case "+":
+                        if (percentIsClicked == false)
+                        {
+                            answer = input1 + input2;
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                        else
+                        {
+
+                        }
                         answer = input1 + input2;
                         lbl_View.Text = answer.ToString();
                         input1 = answer;
@@ -214,17 +227,21 @@ namespace OOP_Calculator
 
         private void btn_Percent_Click(object sender, EventArgs e)
         {
-            double percentage;
-            double percent;
+
+            percentIsClicked = true;
+
+            //double percentage;
+            //double percent;
                                  
-            if(input1 != 0 & input2 != 0)
+           // if(input1 != 0 & input2 != 0)
             {
-                percentage = input2 / 100;
-                percent = percentage * input1;
-                lbl_View.Text = percent.ToString();    
-                
-                
+               // percentage = input2 / 100;
+               // percent = percentage * input1;
+                //lbl_View.Text = percent.ToString();
+               // txtbxOutput.Text = lbl_View.Text;
             }
         }
+
+       
     }
 }
