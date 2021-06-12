@@ -231,10 +231,7 @@ namespace OOP_Calculator
         private void btn_Percent_Click(object sender, EventArgs e)
         {
             percentIsClicked = true;
-            lbl_View.Text = "";
-            double percent;
-            percent = (input2 / 100) * input1;
-            txtbxOutput.Text = percent.ToString();
+            
         }    
     }
 }
