@@ -171,13 +171,17 @@ namespace OOP_Calculator
                         }
                         else
                         {
+                            double percentage;
+                            double percent;
+                            percentage = input2 / 100;
+                            percent = percentage * input1;
 
+                            answer = input1 + percent;
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
                         }
-                        answer = input1 + input2;
-                        lbl_View.Text = answer.ToString();
-                        input1 = answer;
-                        txtbxOutput.Text = "0";
-                        break;
                     case "-":
                         answer = (input1 - input2);
                         lbl_View.Text = answer.ToString();
