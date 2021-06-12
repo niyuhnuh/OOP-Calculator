@@ -215,7 +215,7 @@ namespace OOP_Calculator
                         else
                         {
                             double percent;
-                            percent = (input2 / 100) * input1;
+                            percent = (input2 / 100);
 
                             answer = input1 * percent;
                             lbl_View.Text = answer.ToString();
@@ -237,7 +237,7 @@ namespace OOP_Calculator
                             else
                             {
                                 double percent;
-                                percent = (input2 / 100) * input1;
+                                percent = (input2 / 100);
 
                                 answer = input1 / percent;
                                 lbl_View.Text = answer.ToString();
