@@ -292,6 +292,7 @@ namespace OOP_Calculator
             this.btn_Percent.TabIndex = 30;
             this.btn_Percent.Text = "%";
             this.btn_Percent.UseVisualStyleBackColor = true;
+            this.btn_Percent.Click += new System.EventHandler(this.btn_Percent_Click);
             // 
             // btn_MS
             // 
@@ -346,7 +347,6 @@ namespace OOP_Calculator
             this.btn_Sqrt.TabIndex = 35;
             this.btn_Sqrt.Text = "sqrt()";
             this.btn_Sqrt.UseVisualStyleBackColor = true;
-            this.btn_Sqrt.Click += new System.EventHandler(this.button7_Click);
             // 
             // btn_MR
             // 
