@@ -171,10 +171,9 @@ namespace OOP_Calculator
                         }
                         else
                         {
-                            double percentage;
+                    
                             double percent;
-                            percentage = input2 / 100;
-                            percent = percentage * input1;
+                            percent = (input2 / 100) * input1;
 
                             answer = input1 + percent;
                             lbl_View.Text = answer.ToString();
@@ -232,6 +231,9 @@ namespace OOP_Calculator
         private void btn_Percent_Click(object sender, EventArgs e)
         {
             percentIsClicked = true;
+            double percent;
+            percent = (input2 / 100) * input1;
+            lbl_View.Text = percent.ToString();
         }    
     }
 }
