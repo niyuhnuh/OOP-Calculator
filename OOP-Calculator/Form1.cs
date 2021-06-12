@@ -171,7 +171,6 @@ namespace OOP_Calculator
                         }
                         else
                         {
-                    
                             double percent;
                             percent = (input2 / 100) * input1;
 
@@ -181,25 +180,71 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
+                  
+
                     case "-":
-                        answer = (input1 - input2);
-                        lbl_View.Text = answer.ToString();
-                        input1 = answer;
-                        txtbxOutput.Text = "0";
-                        break;
+                        if (percentIsClicked == false)
+                        {
+                            answer = (input1 - input2);
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                        else
+                        {
+                            double percent;
+                            percent = (input2 / 100) * input1;
+
+                            answer = input1 - percent;
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                       
                     case "*":
-                        answer = (input1 * input2);
-                        lbl_View.Text = answer.ToString();
-                        input1 = answer;
-                        txtbxOutput.Text = "0";
-                        break;
+                        if (percentIsClicked == false)
+                        {
+                            answer = (input1 * input2);
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                        else
+                        {
+                            double percent;
+                            percent = (input2 / 100) * input1;
+
+                            answer = input1 * percent;
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                            
                     case "/":
                         if (input2 != 0)
                         {
-                            answer = (input1 / input2);
-                            lbl_View.Text = answer.ToString();
-                            input1 = answer;
-                            txtbxOutput.Clear();
+                            if (percentIsClicked == false)
+                            {
+                                answer = (input1 / input2);
+                                lbl_View.Text = answer.ToString();
+                                input1 = answer;
+                                txtbxOutput.Clear();
+                            }
+                            else
+                            {
+                                double percent;
+                                percent = (input2 / 100) * input1;
+
+                                answer = input1 / percent;
+                                lbl_View.Text = answer.ToString();
+                                input1 = answer;
+                                txtbxOutput.Clear();
+                            }
+                                
                         }
                         else
                         {
