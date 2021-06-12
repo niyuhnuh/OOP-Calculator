@@ -233,7 +233,7 @@ namespace OOP_Calculator
             percentIsClicked = true;
             double percent;
             percent = (input2 / 100) * input1;
-            lbl_View.Text = percent.ToString();
+            lbl_View.Text = lbl_View.Text + percent.ToString();
         }    
     }
 }
