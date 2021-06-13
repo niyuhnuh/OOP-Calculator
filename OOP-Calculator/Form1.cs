@@ -285,7 +285,7 @@ namespace OOP_Calculator
         {
             fractionIsClicked = true;
 
-            if ()
+            if (fractionIsClicked == true)
             {
                 double answer;
                 answer = (1 / input1);
