@@ -277,6 +277,25 @@ namespace OOP_Calculator
         {
             percentIsClicked = true;
             
-        }    
+        }
+
+        private void btn_Frac_Click(object sender, EventArgs e)
+        {
+            if (input1 != 0)
+            {
+                double answer;
+                answer = (1 / input1);
+                lbl_View.Text = answer.ToString();
+                txtbxOutput.Text = lbl_View.Text;
+            }
+            else
+            {
+                MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
+                txtbxOutput.Clear();
+                txtbxOutput.Text = "0";
+                input1 = 0;
+                lbl_View.Text = txtbxOutput.Text;
+            }
+        }
     }
 }

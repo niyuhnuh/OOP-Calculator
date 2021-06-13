@@ -320,6 +320,7 @@ namespace OOP_Calculator
             this.btn_Frac.TabIndex = 32;
             this.btn_Frac.Text = "1/x";
             this.btn_Frac.UseVisualStyleBackColor = true;
+            this.btn_Frac.Click += new System.EventHandler(this.btn_Frac_Click);
             // 
             // btn_Mminus
             // 
