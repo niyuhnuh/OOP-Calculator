@@ -285,8 +285,8 @@ namespace OOP_Calculator
             {
                 double answer;
                 answer = (1 / input1);
-                lbl_View.Text = answer.ToString();
-                txtbxOutput.Text = lbl_View.Text;
+                lbl_View.Text = "(1/ " + input1 + ")";
+                txtbxOutput.Text = answer.ToString();
             }
             else
             {
