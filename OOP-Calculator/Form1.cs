@@ -15,7 +15,7 @@ namespace OOP_Calculator
         Double input1 = 0;
         Double input2;
         String operatorUse = "";
-        bool percentIsClicked = false;
+        bool percentIsClicked, fractionIsClicked = false;
 
         
         public Form1()
@@ -279,9 +279,13 @@ namespace OOP_Calculator
             
         }
 
+        
+
         private void btn_Frac_Click(object sender, EventArgs e)
         {
-            if (input1 != 0)
+            fractionIsClicked = true;
+
+            if ()
             {
                 double answer;
                 answer = (1 / input1);
