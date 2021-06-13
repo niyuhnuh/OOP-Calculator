@@ -288,10 +288,9 @@ namespace OOP_Calculator
             if (fractionIsClicked == true)
             {
                 double answer;
-                double input3;
-                input3 = input1;
-                answer = (1 / input1);
-                lbl_View.Text = "(1/ " + input3 + ")";
+                double one = 1;
+                answer = (one / input1);
+                lbl_View.Text = "(1/" + input1 + ")";
                 txtbxOutput.Text = answer.ToString();
             }
             else
