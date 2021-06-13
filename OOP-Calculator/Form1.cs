@@ -284,13 +284,14 @@ namespace OOP_Calculator
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
+            double input3;
+            input3 = Double.Parse(txtbxOutput.Text);
 
             if (fractionIsClicked == true)
             {
                 double answer;
-                double one = 1;
-                answer = (one / input1);
-                lbl_View.Text = "(1/" + input1 + ")";
+                answer = (1 / input3);
+                lbl_View.Text = "(1/" + input3 + ")";
                 txtbxOutput.Text = answer.ToString();
             }
             else
