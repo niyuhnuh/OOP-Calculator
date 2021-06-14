@@ -15,7 +15,7 @@ namespace OOP_Calculator
         Double input1 = 0;
         Double input2;
         String operatorUse = "";
-        bool percentIsClicked, fractionIsClicked = false;
+        bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false;
 
         
         public Form1()
@@ -281,19 +281,21 @@ namespace OOP_Calculator
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
-            lbl_View.Text = "√" + input1;
+            sqrtIsClicked = true;
+            double input4;
             double answer;
+            input4 = Double.Parse(txtbxOutput.Text);
 
-            if (input1 < 0)
+            if (input4 < 0 && sqrtIsClicked == true)
             {
                 MessageBox.Show("Math error. Imaginary number. Please input a real number.");
                 txtbxOutput.Clear();
                 txtbxOutput.Text = "0";
                 input1 = 0;
             }
-            else if(input1 >= 0)
+            else if(input4 >= 0 && sqrtIsClicked == true)
             {
-                answer = Math.Sqrt(input1);
+                answer = Math.Sqrt(input4);
                 txtbxOutput.Text = answer.ToString();
             }
         }
