@@ -296,6 +296,7 @@ namespace OOP_Calculator
             else if(input4 >= 0 && sqrtIsClicked == true)
             {
                 answer = Math.Sqrt(input4);
+                lbl_View.Text = "√" + input4;
                 txtbxOutput.Text = answer.ToString();
             }
         }
