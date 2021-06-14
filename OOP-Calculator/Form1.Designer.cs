@@ -348,6 +348,7 @@ namespace OOP_Calculator
             this.btn_Sqrt.TabIndex = 35;
             this.btn_Sqrt.Text = "sqrt()";
             this.btn_Sqrt.UseVisualStyleBackColor = true;
+            this.btn_Sqrt.Click += new System.EventHandler(this.btn_Sqrt_Click);
             // 
             // btn_MR
             // 
@@ -398,7 +399,7 @@ namespace OOP_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 392);
+            this.ClientSize = new System.Drawing.Size(237, 399);
             this.Controls.Add(this.btn_View);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Help);

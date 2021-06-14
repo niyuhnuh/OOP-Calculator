@@ -279,7 +279,24 @@ namespace OOP_Calculator
             
         }
 
-        
+        private void btn_Sqrt_Click(object sender, EventArgs e)
+        {
+            lbl_View.Text = "√" + input1;
+            double answer;
+
+            if (input1 < 0)
+            {
+                MessageBox.Show("Math error. Imaginary number. Please input a real number.");
+                txtbxOutput.Clear();
+                txtbxOutput.Text = "0";
+                input1 = 0;
+            }
+            else if(input1 >= 0)
+            {
+                answer = Math.Sqrt(input1);
+                txtbxOutput.Text = answer.ToString();
+            }
+        }
 
         private void btn_Frac_Click(object sender, EventArgs e)
         {
