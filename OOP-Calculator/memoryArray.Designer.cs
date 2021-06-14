@@ -29,19 +29,45 @@ namespace OOP_Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgv_SavedMemory = new System.Windows.Forms.DataGridView();
+            this.savedMemory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SavedMemory)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgv_SavedMemory
+            // 
+            this.dgv_SavedMemory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.savedMemory});
+            this.dgv_SavedMemory.Location = new System.Drawing.Point(12, 12);
+            this.dgv_SavedMemory.Name = "dgv_SavedMemory";
+            this.dgv_SavedMemory.RowTemplate.Height = 25;
+            this.dgv_SavedMemory.Size = new System.Drawing.Size(213, 374);
+            this.dgv_SavedMemory.TabIndex = 0;
+            // 
+            // savedMemory
+            // 
+            this.savedMemory.Frozen = true;
+            this.savedMemory.HeaderText = "Memory";
+            this.savedMemory.Name = "savedMemory";
+            this.savedMemory.ReadOnly = true;
             // 
             // memoryArray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 398);
+            this.Controls.Add(this.dgv_SavedMemory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "memoryArray";
             this.Text = "memoryArray";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SavedMemory)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgv_SavedMemory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn savedMemory;
     }
 }
