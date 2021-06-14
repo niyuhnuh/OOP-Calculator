@@ -276,12 +276,12 @@ namespace OOP_Calculator
         private void btn_Percent_Click(object sender, EventArgs e)
         {
             percentIsClicked = true;
-            
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
             sqrtIsClicked = true;
+            lbl_View.Text = "";
             double input4;
             double answer;
             input4 = Double.Parse(txtbxOutput.Text);
@@ -303,6 +303,7 @@ namespace OOP_Calculator
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
+            
             double input3;
             input3 = Double.Parse(txtbxOutput.Text);
 
