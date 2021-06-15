@@ -367,6 +367,7 @@ namespace OOP_Calculator
             this.btn_PM.TabIndex = 38;
             this.btn_PM.Text = "+/-";
             this.btn_PM.UseVisualStyleBackColor = true;
+            this.btn_PM.Click += new System.EventHandler(this.btn_PM_Click);
             // 
             // btn_Help
             // 
