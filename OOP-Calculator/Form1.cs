@@ -287,13 +287,13 @@ namespace OOP_Calculator
 
             if (txtbxOutput.Text.Contains("-"))
             {
-                answer = Math.Abs(input1);
+                answer = Math.Abs(input5);
                 txtbxOutput.Text = "";
                 lbl_View.Text = answer.ToString();
             }
             else
             {
-                answer = input1 * -1;
+                answer = input5 * -1;
                 txtbxOutput.Text = "";
                 lbl_View.Text = answer.ToString();
             }
