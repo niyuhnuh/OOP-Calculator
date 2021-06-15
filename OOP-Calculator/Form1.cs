@@ -287,7 +287,7 @@ namespace OOP_Calculator
 
             if (input5 < 0)
             {
-
+                answer = "-"+ input5;
             }
         }
 
