@@ -280,9 +280,9 @@ namespace OOP_Calculator
 
         private void btn_PM_Click(object sender, EventArgs e)
         {
-            //double input5;
+            double input5;
             double answer;
-            //input5 = Double.Parse(txtbxOutput.Text);
+            input5 = Double.Parse(txtbxOutput.Text);
 
 
             if (txtbxOutput.Text.Contains("-"))
