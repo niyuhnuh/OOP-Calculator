@@ -280,14 +280,22 @@ namespace OOP_Calculator
 
         private void btn_PM_Click(object sender, EventArgs e)
         {
-            double input5;
+            //double input5;
             double answer;
-            input5 = Double.Parse(txtbxOutput.Text);
+            //input5 = Double.Parse(txtbxOutput.Text);
 
 
-            if (input5 < 0)
+            if (txtbxOutput.Text.Contains("-"))
             {
-                answer = "-"+ input5;
+                answer = Math.Abs(input1);
+                txtbxOutput.Text = "";
+                lbl_View.Text = answer.ToString();
+            }
+            else
+            {
+                answer = input1 * -1;
+                txtbxOutput.Text = "";
+                lbl_View.Text = answer.ToString();
             }
         }
 
