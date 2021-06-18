@@ -314,6 +314,7 @@ namespace OOP_Calculator
         private void btn_MS_Click(object sender, EventArgs e)
         {
             dgv_Memory.Rows.Add(txtbxOutput.Text);
+            txtbxOutput.Clear();
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
