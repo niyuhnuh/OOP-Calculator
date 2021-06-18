@@ -61,11 +61,12 @@ namespace OOP_Calculator
             this.btn_MR = new System.Windows.Forms.Button();
             this.btn_PM = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Memory = new System.Windows.Forms.DataGridView();
             this.col_MemorySaved = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Memory)).BeginInit();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -305,6 +306,7 @@ namespace OOP_Calculator
             this.btn_MS.TabIndex = 31;
             this.btn_MS.Text = "MS";
             this.btn_MS.UseVisualStyleBackColor = true;
+            this.btn_MS.Click += new System.EventHandler(this.btn_MS_Click);
             // 
             // btn_Mplus
             // 
@@ -381,16 +383,16 @@ namespace OOP_Calculator
             this.btn_View.Text = "View";
             this.btn_View.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_Memory
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Memory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Memory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MemorySaved});
-            this.dataGridView1.Location = new System.Drawing.Point(253, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(137, 336);
-            this.dataGridView1.TabIndex = 42;
+            this.dgv_Memory.Location = new System.Drawing.Point(244, 50);
+            this.dgv_Memory.Name = "dgv_Memory";
+            this.dgv_Memory.RowTemplate.Height = 25;
+            this.dgv_Memory.Size = new System.Drawing.Size(137, 336);
+            this.dgv_Memory.TabIndex = 42;
             // 
             // col_MemorySaved
             // 
@@ -416,12 +418,22 @@ namespace OOP_Calculator
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(232, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(49, 23);
+            this.button3.TabIndex = 43;
+            this.button3.Text = "View";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 399);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dgv_Memory);
             this.Controls.Add(this.btn_View);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -458,7 +470,7 @@ namespace OOP_Calculator
             this.Controls.Add(this.dividebtn);
             this.Name = "Form1";
             this.Text = "Calculator";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Memory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,10 +509,11 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button btn_MR;
         private System.Windows.Forms.Button btn_PM;
         private System.Windows.Forms.Button btn_View;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Memory;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MemorySaved;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
