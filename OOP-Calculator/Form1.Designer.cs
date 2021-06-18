@@ -60,9 +60,12 @@ namespace OOP_Calculator
             this.btn_Sqrt = new System.Windows.Forms.Button();
             this.btn_MR = new System.Windows.Forms.Button();
             this.btn_PM = new System.Windows.Forms.Button();
-            this.btn_Help = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.col_MemorySaved = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -369,41 +372,59 @@ namespace OOP_Calculator
             this.btn_PM.UseVisualStyleBackColor = true;
             this.btn_PM.Click += new System.EventHandler(this.btn_PM_Click);
             // 
-            // btn_Help
-            // 
-            this.btn_Help.Location = new System.Drawing.Point(121, 3);
-            this.btn_Help.Name = "btn_Help";
-            this.btn_Help.Size = new System.Drawing.Size(49, 23);
-            this.btn_Help.TabIndex = 39;
-            this.btn_Help.Text = "Help";
-            this.btn_Help.UseVisualStyleBackColor = true;
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.Location = new System.Drawing.Point(67, 3);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(49, 23);
-            this.btn_Edit.TabIndex = 40;
-            this.btn_Edit.Text = "Edit";
-            this.btn_Edit.UseVisualStyleBackColor = true;
-            // 
             // btn_View
             // 
-            this.btn_View.Location = new System.Drawing.Point(12, 3);
+            this.btn_View.Location = new System.Drawing.Point(-73, 3);
             this.btn_View.Name = "btn_View";
             this.btn_View.Size = new System.Drawing.Size(49, 23);
             this.btn_View.TabIndex = 41;
             this.btn_View.Text = "View";
             this.btn_View.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_MemorySaved});
+            this.dataGridView1.Location = new System.Drawing.Point(253, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(137, 336);
+            this.dataGridView1.TabIndex = 42;
+            // 
+            // col_MemorySaved
+            // 
+            this.col_MemorySaved.HeaderText = "Memory";
+            this.col_MemorySaved.Name = "col_MemorySaved";
+            this.col_MemorySaved.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(341, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Help";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(287, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 23);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Edit";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 399);
+            this.ClientSize = new System.Drawing.Size(403, 399);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_View);
-            this.Controls.Add(this.btn_Edit);
-            this.Controls.Add(this.btn_Help);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_PM);
             this.Controls.Add(this.btn_Mminus);
             this.Controls.Add(this.btn_MC);
@@ -437,6 +458,7 @@ namespace OOP_Calculator
             this.Controls.Add(this.dividebtn);
             this.Name = "Form1";
             this.Text = "Calculator";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,9 +496,11 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button btn_Sqrt;
         private System.Windows.Forms.Button btn_MR;
         private System.Windows.Forms.Button btn_PM;
-        private System.Windows.Forms.Button btn_Help;
-        private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_View;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MemorySaved;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
