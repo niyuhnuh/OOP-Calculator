@@ -318,6 +318,7 @@ namespace OOP_Calculator
             lbl_View.Text = txtbxOutput.Text;
         }
 
+
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
             sqrtIsClicked = true;
