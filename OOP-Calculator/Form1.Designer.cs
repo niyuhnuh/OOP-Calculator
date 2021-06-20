@@ -435,6 +435,7 @@ namespace OOP_Calculator
             this.lstbox_Memory.Location = new System.Drawing.Point(441, 73);
             this.lstbox_Memory.Name = "lstbox_Memory";
             this.lstbox_Memory.Size = new System.Drawing.Size(120, 94);
+            this.lstbox_Memory.Sorted = true;
             this.lstbox_Memory.TabIndex = 44;
             // 
             // Form1
