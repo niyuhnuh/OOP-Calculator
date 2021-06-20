@@ -326,7 +326,7 @@ namespace OOP_Calculator
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            txtbxOutput.Text = lstbox_Memory.Items.IndexOf(1).ToString();
+            txtbxOutput.Text = lstbox_Memory.Items.IndexOf(2).ToString();
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
