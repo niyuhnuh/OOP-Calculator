@@ -61,13 +61,10 @@ namespace OOP_Calculator
             this.btn_MR = new System.Windows.Forms.Button();
             this.btn_PM = new System.Windows.Forms.Button();
             this.btn_View = new System.Windows.Forms.Button();
-            this.dgv_Memory = new System.Windows.Forms.DataGridView();
-            this.col_MemorySaved = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lstbox_Memory = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Memory)).BeginInit();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -384,23 +381,6 @@ namespace OOP_Calculator
             this.btn_View.Text = "View";
             this.btn_View.UseVisualStyleBackColor = true;
             // 
-            // dgv_Memory
-            // 
-            this.dgv_Memory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Memory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_MemorySaved});
-            this.dgv_Memory.Location = new System.Drawing.Point(244, 50);
-            this.dgv_Memory.Name = "dgv_Memory";
-            this.dgv_Memory.RowTemplate.Height = 25;
-            this.dgv_Memory.Size = new System.Drawing.Size(137, 336);
-            this.dgv_Memory.TabIndex = 42;
-            // 
-            // col_MemorySaved
-            // 
-            this.col_MemorySaved.HeaderText = "Memory";
-            this.col_MemorySaved.Name = "col_MemorySaved";
-            this.col_MemorySaved.ReadOnly = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(341, 12);
@@ -432,20 +412,20 @@ namespace OOP_Calculator
             // 
             this.lstbox_Memory.FormattingEnabled = true;
             this.lstbox_Memory.ItemHeight = 15;
-            this.lstbox_Memory.Location = new System.Drawing.Point(441, 73);
+            this.lstbox_Memory.Location = new System.Drawing.Point(249, 50);
             this.lstbox_Memory.Name = "lstbox_Memory";
-            this.lstbox_Memory.Size = new System.Drawing.Size(120, 94);
+            this.lstbox_Memory.Size = new System.Drawing.Size(120, 199);
             this.lstbox_Memory.Sorted = true;
             this.lstbox_Memory.TabIndex = 44;
+            this.lstbox_Memory.SelectedIndexChanged += new System.EventHandler(this.lstbox_Memory_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 399);
+            this.ClientSize = new System.Drawing.Size(402, 399);
             this.Controls.Add(this.lstbox_Memory);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.dgv_Memory);
             this.Controls.Add(this.btn_View);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -482,7 +462,6 @@ namespace OOP_Calculator
             this.Controls.Add(this.dividebtn);
             this.Name = "Form1";
             this.Text = "Calculator";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Memory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,8 +500,6 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button btn_MR;
         private System.Windows.Forms.Button btn_PM;
         private System.Windows.Forms.Button btn_View;
-        private System.Windows.Forms.DataGridView dgv_Memory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_MemorySaved;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

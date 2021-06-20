@@ -313,16 +313,15 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            //dgv_Memory.Rows.Add(txtbxOutput.Text);
-            //txtbxOutput.Clear();
-            //lbl_View.Text = txtbxOutput.Text;
-
             lstbox_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
         }
 
+        private void lstbox_Memory_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
