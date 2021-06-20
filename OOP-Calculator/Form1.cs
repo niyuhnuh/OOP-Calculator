@@ -318,9 +318,10 @@ namespace OOP_Calculator
             lbl_View.Text = txtbxOutput.Text;
         }
 
-        private void lstbox_Memory_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void btn_MC_Click(object sender, EventArgs e)
+        {
+            lstbox_Memory.Items.Clear();
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)

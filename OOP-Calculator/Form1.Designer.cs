@@ -342,6 +342,7 @@ namespace OOP_Calculator
             this.btn_MC.TabIndex = 36;
             this.btn_MC.Text = "MC";
             this.btn_MC.UseVisualStyleBackColor = true;
+            this.btn_MC.Click += new System.EventHandler(this.btn_MC_Click);
             // 
             // btn_Sqrt
             // 
