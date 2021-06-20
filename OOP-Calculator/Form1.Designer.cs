@@ -362,6 +362,7 @@ namespace OOP_Calculator
             this.btn_MR.TabIndex = 34;
             this.btn_MR.Text = "MR";
             this.btn_MR.UseVisualStyleBackColor = true;
+            this.btn_MR.Click += new System.EventHandler(this.btn_MR_Click);
             // 
             // btn_PM
             // 
@@ -418,7 +419,6 @@ namespace OOP_Calculator
             this.lstbox_Memory.Size = new System.Drawing.Size(120, 199);
             this.lstbox_Memory.Sorted = true;
             this.lstbox_Memory.TabIndex = 44;
-            this.lstbox_Memory.SelectedIndexChanged += new System.EventHandler(this.lstbox_Memory_SelectedIndexChanged);
             // 
             // Form1
             // 

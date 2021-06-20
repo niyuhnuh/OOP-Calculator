@@ -324,6 +324,11 @@ namespace OOP_Calculator
             lstbox_Memory.Items.Clear();
         }
 
+        private void btn_MR_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = lstbox_Memory.Items.IndexOf(1).ToString();
+        }
+
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
             sqrtIsClicked = true;
