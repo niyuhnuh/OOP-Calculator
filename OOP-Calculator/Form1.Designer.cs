@@ -66,6 +66,7 @@ namespace OOP_Calculator
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.lstbox_Memory = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Memory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -427,11 +428,21 @@ namespace OOP_Calculator
             this.button3.Text = "View";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // lstbox_Memory
+            // 
+            this.lstbox_Memory.FormattingEnabled = true;
+            this.lstbox_Memory.ItemHeight = 15;
+            this.lstbox_Memory.Location = new System.Drawing.Point(441, 73);
+            this.lstbox_Memory.Name = "lstbox_Memory";
+            this.lstbox_Memory.Size = new System.Drawing.Size(120, 94);
+            this.lstbox_Memory.TabIndex = 44;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 399);
+            this.ClientSize = new System.Drawing.Size(603, 399);
+            this.Controls.Add(this.lstbox_Memory);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dgv_Memory);
             this.Controls.Add(this.btn_View);
@@ -514,6 +525,7 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox lstbox_Memory;
     }
 }
 
