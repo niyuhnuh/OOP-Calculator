@@ -326,7 +326,6 @@ namespace OOP_Calculator
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            //txtbxOutput.Text = lstbox_Memory.Items.SelectedIndex(1).ToString();
             int i = lstbox_Memory.TopIndex;
             string input = lstbox_Memory.Items[i].ToString();
             txtbxOutput.Text = input;
