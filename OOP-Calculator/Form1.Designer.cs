@@ -314,6 +314,7 @@ namespace OOP_Calculator
             this.btn_Mplus.TabIndex = 33;
             this.btn_Mplus.Text = "M+";
             this.btn_Mplus.UseVisualStyleBackColor = true;
+            this.btn_Mplus.Click += new System.EventHandler(this.btn_Mplus_Click);
             // 
             // btn_Frac
             // 
@@ -417,7 +418,6 @@ namespace OOP_Calculator
             this.lstbox_Memory.Location = new System.Drawing.Point(249, 50);
             this.lstbox_Memory.Name = "lstbox_Memory";
             this.lstbox_Memory.Size = new System.Drawing.Size(120, 199);
-            this.lstbox_Memory.Sorted = true;
             this.lstbox_Memory.TabIndex = 44;
             // 
             // Form1

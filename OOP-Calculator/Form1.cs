@@ -326,10 +326,25 @@ namespace OOP_Calculator
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            int i = lstbox_Memory.TopIndex;
-            string input = lstbox_Memory.Items[i].ToString();
-            txtbxOutput.Text = input;
-            lbl_View.Text = txtbxOutput.Text;
+            if (lstbox_Memory.SelectedIndex != -1)
+            {
+                int j = lstbox_Memory.SelectedIndex;
+                string item_Selected = lstbox_Memory.Items[j].ToString();
+                txtbxOutput.Text = item_Selected;
+                lbl_View.Text = txtbxOutput.Text;
+            }
+            else
+            {
+                int i = lstbox_Memory.TopIndex;
+                string input = lstbox_Memory.Items[i].ToString();
+                txtbxOutput.Text = input;
+                lbl_View.Text = txtbxOutput.Text;
+            }
+        }
+
+        private void btn_Mplus_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
