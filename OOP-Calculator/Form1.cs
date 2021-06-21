@@ -313,6 +313,7 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
+            
             lstbox_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
@@ -346,6 +347,8 @@ namespace OOP_Calculator
         {
 
         }
+
+      
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
