@@ -329,6 +329,8 @@ namespace OOP_Calculator
             //txtbxOutput.Text = lstbox_Memory.Items.SelectedIndex(1).ToString();
             int i = lstbox_Memory.TopIndex;
             string input = lstbox_Memory.Items[i].ToString();
+            txtbxOutput.Text = input;
+            lbl_View.Text = txtbxOutput.Text;
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
