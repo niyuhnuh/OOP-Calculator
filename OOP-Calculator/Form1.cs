@@ -335,9 +335,9 @@ namespace OOP_Calculator
             }
             else
             {
-                string input = lstbox_Memory.Items.ToString();
-                //txtbxOutput.Text = input;
-                List<string> saved = new List<string> {input};
+                //string input = lstbox_Memory.Items.ToString();
+                List<string> saved = new List<string> { lstbox_Memory.Items.ToString()};
+                saved.Count();
                 string last = saved.Last();
                 txtbxOutput.Text = last;
 
