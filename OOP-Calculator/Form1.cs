@@ -15,7 +15,7 @@ namespace OOP_Calculator
         Double input1 = 0;
         Double input2;
         String operatorUse = "";
-        bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false;
+        bool percentIsClicked, fractionIsClicked, sqrtIsClicked, memoryPlusIsClicked = false;
 
         
         public Form1()
@@ -164,6 +164,14 @@ namespace OOP_Calculator
                         if (percentIsClicked == false)
                         {
                             answer = input1 + input2;
+                            lbl_View.Text = answer.ToString();
+                            input1 = answer;
+                            txtbxOutput.Text = "0";
+                            break;
+                        }
+                        else if (memoryPlusIsClicked == true)
+                        {
+                            answer = input1 + Double.Parse(txtbx_Saved1.Text);
                             lbl_View.Text = answer.ToString();
                             input1 = answer;
                             txtbxOutput.Text = "0";
@@ -334,8 +342,9 @@ namespace OOP_Calculator
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-
+            memoryPlusIsClicked = true;
         }
+     
 
         private void Form1_Load(object sender, EventArgs e)
         {
