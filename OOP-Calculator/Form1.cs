@@ -336,7 +336,10 @@ namespace OOP_Calculator
             else
             {
                 string input = lstbox_Memory.Items.ToString();
+                //txtbxOutput.Text = input;
                 List<string> saved = new List<string> {input};
+                string last = saved.Last();
+                txtbxOutput.Text = last;
 
                 //int i = lstbox_Memory.Count 
                 //string input = lstbox_Memory.Items[i].ToString();
