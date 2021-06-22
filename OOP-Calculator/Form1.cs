@@ -313,9 +313,21 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            lstbox_Memory.Items.Add(txtbxOutput.Text);
+
+            //lstbox_Memory.Items.Add(txtbxOutput.Text);
+            txtbx_Saved1.Visible = true;
+            txtbx_Saved1.Text = txtbxOutput.Text;
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
+            //if (txtbx_Saved1.Visible == true)
+            {
+                //txtbx_Saved2.Visible = true;
+                //txtbx_Saved1.Text = txtbx_Saved2.Text;
+                //txtbxOutput.Clear();
+                //lbl_View.Text = txtbxOutput.Text;
+            }
+            
+            
         }
 
 
@@ -336,7 +348,7 @@ namespace OOP_Calculator
             else
             {
                 List<string> saved = new List<string> { lstbox_Memory.Items.ToString()};
-                var a = saved.Count - 1;
+                int a = saved.Count;
                 txtbxOutput.Text = a.ToString();
 
             }

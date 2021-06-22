@@ -65,6 +65,11 @@ namespace OOP_Calculator
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lstbox_Memory = new System.Windows.Forms.ListBox();
+            this.txtbx_Saved1 = new System.Windows.Forms.TextBox();
+            this.txtbx_Saved2 = new System.Windows.Forms.TextBox();
+            this.txtbx_Saved3 = new System.Windows.Forms.TextBox();
+            this.txtbx_Saved4 = new System.Windows.Forms.TextBox();
+            this.txtbx_Saved5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -415,16 +420,61 @@ namespace OOP_Calculator
             // 
             this.lstbox_Memory.FormattingEnabled = true;
             this.lstbox_Memory.ItemHeight = 15;
-            this.lstbox_Memory.Location = new System.Drawing.Point(249, 50);
+            this.lstbox_Memory.Location = new System.Drawing.Point(407, 50);
             this.lstbox_Memory.Name = "lstbox_Memory";
             this.lstbox_Memory.Size = new System.Drawing.Size(120, 199);
             this.lstbox_Memory.TabIndex = 44;
+            // 
+            // txtbx_Saved1
+            // 
+            this.txtbx_Saved1.Location = new System.Drawing.Point(263, 50);
+            this.txtbx_Saved1.Name = "txtbx_Saved1";
+            this.txtbx_Saved1.Size = new System.Drawing.Size(100, 23);
+            this.txtbx_Saved1.TabIndex = 45;
+            this.txtbx_Saved1.Visible = false;
+            // 
+            // txtbx_Saved2
+            // 
+            this.txtbx_Saved2.Location = new System.Drawing.Point(263, 79);
+            this.txtbx_Saved2.Name = "txtbx_Saved2";
+            this.txtbx_Saved2.Size = new System.Drawing.Size(100, 23);
+            this.txtbx_Saved2.TabIndex = 46;
+            this.txtbx_Saved2.Visible = false;
+            // 
+            // txtbx_Saved3
+            // 
+            this.txtbx_Saved3.Location = new System.Drawing.Point(263, 108);
+            this.txtbx_Saved3.Name = "txtbx_Saved3";
+            this.txtbx_Saved3.Size = new System.Drawing.Size(100, 23);
+            this.txtbx_Saved3.TabIndex = 47;
+            this.txtbx_Saved3.Visible = false;
+            // 
+            // txtbx_Saved4
+            // 
+            this.txtbx_Saved4.Location = new System.Drawing.Point(263, 137);
+            this.txtbx_Saved4.Name = "txtbx_Saved4";
+            this.txtbx_Saved4.Size = new System.Drawing.Size(100, 23);
+            this.txtbx_Saved4.TabIndex = 48;
+            this.txtbx_Saved4.Visible = false;
+            // 
+            // txtbx_Saved5
+            // 
+            this.txtbx_Saved5.Location = new System.Drawing.Point(263, 166);
+            this.txtbx_Saved5.Name = "txtbx_Saved5";
+            this.txtbx_Saved5.Size = new System.Drawing.Size(100, 23);
+            this.txtbx_Saved5.TabIndex = 49;
+            this.txtbx_Saved5.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 399);
+            this.ClientSize = new System.Drawing.Size(542, 399);
+            this.Controls.Add(this.txtbx_Saved5);
+            this.Controls.Add(this.txtbx_Saved4);
+            this.Controls.Add(this.txtbx_Saved3);
+            this.Controls.Add(this.txtbx_Saved2);
+            this.Controls.Add(this.txtbx_Saved1);
             this.Controls.Add(this.lstbox_Memory);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_View);
@@ -506,6 +556,11 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox lstbox_Memory;
+        private System.Windows.Forms.TextBox txtbx_Saved1;
+        private System.Windows.Forms.TextBox txtbx_Saved2;
+        private System.Windows.Forms.TextBox txtbx_Saved3;
+        private System.Windows.Forms.TextBox txtbx_Saved4;
+        private System.Windows.Forms.TextBox txtbx_Saved5;
     }
 }
 
