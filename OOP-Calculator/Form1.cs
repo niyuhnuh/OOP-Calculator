@@ -329,6 +329,7 @@ namespace OOP_Calculator
         private void btn_MR_Click(object sender, EventArgs e)
         {
             txtbxOutput.Text = txtbx_Saved1.Text;
+            lbl_View.Text = txtbxOutput.Text;
         }
 
         private void btn_Mplus_Click(object sender, EventArgs e)
