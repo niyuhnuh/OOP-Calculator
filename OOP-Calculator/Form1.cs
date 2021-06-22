@@ -335,16 +335,8 @@ namespace OOP_Calculator
             }
             else
             {
-                //string input = lstbox_Memory.Items.ToString();
                 List<string> saved = new List<string> { lstbox_Memory.Items.ToString()};
-                saved.Count();
-                string last = saved.Last();
-                txtbxOutput.Text = last;
 
-                //int i = lstbox_Memory.Count 
-                //string input = lstbox_Memory.Items[i].ToString();
-                //txtbxOutput.Text = input;
-                //lbl_View.Text = txtbxOutput.Text;
             }
         }
 
