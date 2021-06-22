@@ -313,45 +313,22 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-
-            //lstbox_Memory.Items.Add(txtbxOutput.Text);
             txtbx_Saved1.Visible = true;
             txtbx_Saved1.Text = txtbxOutput.Text;
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
-            //if (txtbx_Saved1.Visible == true)
-            {
-                //txtbx_Saved2.Visible = true;
-                //txtbx_Saved1.Text = txtbx_Saved2.Text;
-                //txtbxOutput.Clear();
-                //lbl_View.Text = txtbxOutput.Text;
-            }
-            
-            
+ 
         }
 
 
         private void btn_MC_Click(object sender, EventArgs e)
         {
-            lstbox_Memory.Items.Clear();
+            txtbx_Saved1.Clear();
         }
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            if (lstbox_Memory.SelectedIndex != -1)
-            {
-                int j = lstbox_Memory.SelectedIndex;
-                string item_Selected = lstbox_Memory.Items[j].ToString();
-                txtbxOutput.Text = item_Selected;
-                lbl_View.Text = txtbxOutput.Text;
-            }
-            else
-            {
-                List<string> saved = new List<string> { lstbox_Memory.Items.ToString()};
-                int a = saved.Count;
-                txtbxOutput.Text = a.ToString();
-
-            }
+            txtbxOutput.Text = txtbx_Saved1.Text;
         }
 
         private void btn_Mplus_Click(object sender, EventArgs e)
