@@ -424,7 +424,7 @@ namespace OOP_Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 399);
+            this.ClientSize = new System.Drawing.Size(408, 399);
             this.Controls.Add(this.lstbox_Memory);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_View);

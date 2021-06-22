@@ -336,6 +336,8 @@ namespace OOP_Calculator
             else
             {
                 List<string> saved = new List<string> { lstbox_Memory.Items.ToString()};
+                var a = saved.Count - 1;
+                txtbxOutput.Text = a.ToString();
 
             }
         }
