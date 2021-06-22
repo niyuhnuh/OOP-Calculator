@@ -313,7 +313,6 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            
             lstbox_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
@@ -336,10 +335,13 @@ namespace OOP_Calculator
             }
             else
             {
-                int i = lstbox_Memory.TopIndex;
-                string input = lstbox_Memory.Items[i].ToString();
-                txtbxOutput.Text = input;
-                lbl_View.Text = txtbxOutput.Text;
+                string input = lstbox_Memory.Items.ToString();
+                List<string> saved = new List<string> {input};
+
+                //int i = lstbox_Memory.Count 
+                //string input = lstbox_Memory.Items[i].ToString();
+                //txtbxOutput.Text = input;
+                //lbl_View.Text = txtbxOutput.Text;
             }
         }
 
@@ -348,7 +350,10 @@ namespace OOP_Calculator
 
         }
 
-      
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
