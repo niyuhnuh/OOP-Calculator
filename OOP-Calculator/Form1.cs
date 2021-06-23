@@ -314,24 +314,12 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtbx_Saved1.Text))
-            {
-                txtbx_Saved1.Visible = true;
-                txtbx_Saved1.Text = txtbxOutput.Text;
-                txtbxOutput.Clear();
-                lbl_View.Text = txtbxOutput.Text;
-            }
-            else
-            {
-                txtbx_Saved1.Visible = true;
-                txtbx_Saved1.Text = txtbxOutput.Text;
-                txtbxOutput.Clear();
-                lbl_View.Text = txtbxOutput.Text;
-                btn_Mminus.Enabled = true;
-                btn_Mplus.Enabled = true;
-                btn_MR.Enabled = true;
-                btn_MC.Enabled = true;
-            }
+ 
+            txtbx_Saved1.Visible = true;
+            txtbx_Saved1.Text = txtbxOutput.Text;
+            txtbxOutput.Clear();
+            lbl_View.Text = txtbxOutput.Text;
+           
         }
 
 
