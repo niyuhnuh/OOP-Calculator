@@ -388,7 +388,7 @@ namespace OOP_Calculator
         }
         //End of memory minus button function code
 
-
+        //Start of memory save textbox function code
         private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
         { 
              btn_Mminus.Enabled = true;
@@ -396,7 +396,9 @@ namespace OOP_Calculator
              btn_MR.Enabled = true;
              btn_MC.Enabled = true;     
         }
+        //End of memory save textbox function code
 
+        //Start of square root function code
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
             sqrtIsClicked = true;
@@ -419,7 +421,9 @@ namespace OOP_Calculator
                 txtbxOutput.Text = answer.ToString();
             }
         }
+        //End of square root function code
 
+        //Start of fractiom function code
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
@@ -443,5 +447,6 @@ namespace OOP_Calculator
                 lbl_View.Text = txtbxOutput.Text;
             }
         }
+        //End of fractiom function code
     }
 }
