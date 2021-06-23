@@ -169,14 +169,14 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
-                        else if (memoryPlusIsClicked == true)
+                        //else if (memoryPlusIsClicked == true)
                         {
-                            double input3 = Double.Parse(txtbx_Saved1.Text);
-                            answer = input1 + input3;
-                            lbl_View.Text = answer.ToString();
-                            input1 = answer;
-                            txtbxOutput.Text = "0";
-                            break;
+                            //double input3 = Double.Parse(txtbx_Saved1.Text);
+                            //answer = input1 + input3;
+                            //lbl_View.Text = answer.ToString();
+                            //input1 = answer;
+                            //txtbxOutput.Text = "0";
+                            //break;
                         }
                         else
                         {
@@ -348,10 +348,10 @@ namespace OOP_Calculator
             {
                 equals_Btn.PerformClick();
                 operatorUse = add_Sign.Text;
+                txtbxOutput.Clear();
+                lbl_View.Text = lbl_View.Text + add_Sign.Text + txtbx_Saved1.Text;
             }
-            
-            //txtbxOutput.Clear();
-            //lbl_View.Text = lbl_View.Text + add_Sign.Text;
+
         }
      
 
