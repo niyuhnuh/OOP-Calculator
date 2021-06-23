@@ -341,27 +341,32 @@ namespace OOP_Calculator
         }
         //End of positive/negative button function code
 
+        //Start of memory save button function code
         private void btn_MS_Click(object sender, EventArgs e)
         {
             txtbx_Saved1.Visible = true;
             txtbx_Saved1.Text = txtbxOutput.Text;
             txtbxOutput.Text = "0";
             lbl_View.Text = txtbxOutput.Text;
-           
         }
+        //End of memory save button function code
 
-
+        //Start of memory clear button function code
         private void btn_MC_Click(object sender, EventArgs e)
         {
             txtbx_Saved1.Clear();
         }
+        //End of memory clear button function code
 
+        //Start of memory recall button function code
         private void btn_MR_Click(object sender, EventArgs e)
         {
             txtbxOutput.Text = txtbx_Saved1.Text;
             lbl_View.Text = txtbxOutput.Text;
         }
+        //End of memory recall button function code
 
+        //Start of memory plus button function code
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
             double input5 = Double.Parse(txtbx_Saved1.Text);
@@ -369,9 +374,10 @@ namespace OOP_Calculator
             answer = Double.Parse(lbl_View.Text) + input5;
             txtbxOutput.Text = answer.ToString();
             lbl_View.Text = txtbxOutput.Text;
-
         }
+        //End of memory plus button function code
 
+        //Start of memory minus button function code
         private void btn_Mminus_Click(object sender, EventArgs e)
         {  
             double input5 = Double.Parse(txtbx_Saved1.Text);
@@ -380,6 +386,7 @@ namespace OOP_Calculator
             txtbxOutput.Text = answer.ToString();
             lbl_View.Text = txtbxOutput.Text;
         }
+        //End of memory minus button function code
 
 
         private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
