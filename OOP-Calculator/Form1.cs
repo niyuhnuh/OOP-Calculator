@@ -334,15 +334,12 @@ namespace OOP_Calculator
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            memoryPlusIsClicked = true;
-            if (memoryPlusIsClicked == true)
-            {
-                double input5 = Double.Parse(txtbx_Saved1.Text);
-                double answer;
-                answer = Double.Parse(lbl_View.Text) + input5;
-                txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = txtbxOutput.Text;
-            }
+          
+             double input5 = Double.Parse(txtbx_Saved1.Text);
+             double answer;
+             answer = Double.Parse(lbl_View.Text) + input5;
+             txtbxOutput.Text = answer.ToString();
+             lbl_View.Text = txtbxOutput.Text;
 
         }
      
