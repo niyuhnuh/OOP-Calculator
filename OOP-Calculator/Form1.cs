@@ -171,7 +171,8 @@ namespace OOP_Calculator
                         }
                         else if (memoryPlusIsClicked == true)
                         {
-                            answer = input1 + Double.Parse(txtbx_Saved1.Text);
+                            input2 = Double.Parse(txtbx_Saved1.Text);
+                            answer = input1 + input2;
                             lbl_View.Text = answer.ToString();
                             input1 = answer;
                             txtbxOutput.Text = "0";
