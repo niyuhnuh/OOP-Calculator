@@ -45,10 +45,13 @@ namespace OOP_Calculator
             int len = txtbxOutput.TextLength - 1;
             string val = txtbxOutput.Text;
             txtbxOutput.Clear();
-            for (int i = 0; i < len; i++)
+
+            //This for loop checks for the length of the text in txtbxOutput.Text
+            for (int i = 0; i < len; i++) 
                 txtbxOutput.Text = txtbxOutput.Text + val[i];
                 lbl_View.Text = txtbxOutput.Text;
-
+            //This if statement checks if the length is less than 1
+            //Meaning if there is no longer any number to use the backspace function on, the default value of "0" would replace the text values
             if (len < 1)
                 txtbxOutput.Text = "0";
                 lbl_View.Text = "0";             
