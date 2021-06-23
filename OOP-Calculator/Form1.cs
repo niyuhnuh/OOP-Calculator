@@ -35,6 +35,7 @@ namespace OOP_Calculator
             btn_MR.Enabled = false;
             btn_Mplus.Enabled = false;
             btn_Mminus.Enabled = false;
+            //Basically, restarts the entire calculator
         }
         //End of clear button function code
 
@@ -295,12 +296,15 @@ namespace OOP_Calculator
         //End of equals button function code
 
 
-
+        //Start of percent button function code
         private void btn_Percent_Click(object sender, EventArgs e)
         {
             percentIsClicked = true;
         }
+        //End of percent button function code
 
+
+        //Start of positive/negative button function code
         private void btn_PM_Click(object sender, EventArgs e)
         {
             double input5;
@@ -331,6 +335,7 @@ namespace OOP_Calculator
                 answer = input1;
             }
         }
+        //End of positive/negative button function code
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
