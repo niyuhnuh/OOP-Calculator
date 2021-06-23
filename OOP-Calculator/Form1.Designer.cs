@@ -308,6 +308,7 @@ namespace OOP_Calculator
             // 
             // btn_Mplus
             // 
+            this.btn_Mplus.Enabled = false;
             this.btn_Mplus.Location = new System.Drawing.Point(122, 113);
             this.btn_Mplus.Name = "btn_Mplus";
             this.btn_Mplus.Size = new System.Drawing.Size(49, 26);
@@ -328,6 +329,7 @@ namespace OOP_Calculator
             // 
             // btn_Mminus
             // 
+            this.btn_Mminus.Enabled = false;
             this.btn_Mminus.Location = new System.Drawing.Point(176, 113);
             this.btn_Mminus.Name = "btn_Mminus";
             this.btn_Mminus.Size = new System.Drawing.Size(49, 26);
@@ -338,6 +340,7 @@ namespace OOP_Calculator
             // 
             // btn_MC
             // 
+            this.btn_MC.Enabled = false;
             this.btn_MC.Location = new System.Drawing.Point(177, 84);
             this.btn_MC.Name = "btn_MC";
             this.btn_MC.Size = new System.Drawing.Size(49, 26);
@@ -358,6 +361,7 @@ namespace OOP_Calculator
             // 
             // btn_MR
             // 
+            this.btn_MR.Enabled = false;
             this.btn_MR.Location = new System.Drawing.Point(12, 113);
             this.btn_MR.Name = "btn_MR";
             this.btn_MR.Size = new System.Drawing.Size(49, 26);
