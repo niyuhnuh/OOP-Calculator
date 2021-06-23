@@ -70,7 +70,6 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
-
             else
             {
                 operatorUse = add_Sign.Text;
@@ -78,7 +77,6 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
-            
         }
 
         private void sub_Sign_Click(object sender, EventArgs e)
@@ -89,9 +87,7 @@ namespace OOP_Calculator
                 operatorUse = sub_Sign.Text;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
-            }
-          
-            
+            }          
             else
             {
                 operatorUse = sub_Sign.Text;
@@ -287,9 +283,7 @@ namespace OOP_Calculator
         {
             double input5;
             double answer;
-       
             input5 = Double.Parse(txtbxOutput.Text);
-
 
             if (txtbxOutput.Text.Contains("-"))
             {
@@ -348,14 +342,12 @@ namespace OOP_Calculator
         }
 
         private void btn_Mminus_Click(object sender, EventArgs e)
-        {
-          
+        {  
             double input5 = Double.Parse(txtbx_Saved1.Text);
             double answer;
             answer = (Double.Parse(lbl_View.Text) - input5);
             txtbxOutput.Text = answer.ToString();
             lbl_View.Text = txtbxOutput.Text;
-
         }
 
 
