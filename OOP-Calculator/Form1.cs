@@ -350,14 +350,32 @@ namespace OOP_Calculator
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = txtbxOutput.Text;
             }
-             
-
         }
      
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_Mminus_Click(object sender, EventArgs e)
+        {
+            if (input1 != 0)
+            {
+                double input5 = Double.Parse(txtbx_Saved1.Text);
+                double answer;
+                answer = Double.Parse(lbl_View.Text) - input5;
+                txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = txtbxOutput.Text;
+            }
+            else
+            {
+                double input5 = Double.Parse(txtbx_Saved1.Text);
+                double answer;
+                answer = 0 - input5;
+                txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = txtbxOutput.Text;
+            }
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)

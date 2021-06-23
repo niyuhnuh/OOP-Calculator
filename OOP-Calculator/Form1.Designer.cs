@@ -334,6 +334,7 @@ namespace OOP_Calculator
             this.btn_Mminus.TabIndex = 37;
             this.btn_Mminus.Text = "M-";
             this.btn_Mminus.UseVisualStyleBackColor = true;
+            this.btn_Mminus.Click += new System.EventHandler(this.btn_Mminus_Click);
             // 
             // btn_MC
             // 
