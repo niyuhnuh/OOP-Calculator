@@ -359,7 +359,8 @@ namespace OOP_Calculator
             {
                 double input5 = Double.Parse(txtbx_Saved1.Text);
                 double answer;
-                answer = Double.Parse(lbl_View.Text) - input5;
+                answer = (Double.Parse(lbl_View.Text) - input5);
+
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = txtbxOutput.Text;
             }
@@ -367,7 +368,7 @@ namespace OOP_Calculator
             {
                 double input5 = Double.Parse(txtbx_Saved1.Text);
                 double answer;
-                answer = 0 - input5;
+                answer = (0 - input5);
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = txtbxOutput.Text;
             }
