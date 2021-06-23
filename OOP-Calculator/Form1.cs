@@ -344,6 +344,7 @@ namespace OOP_Calculator
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
             memoryPlusIsClicked = true;
+            txtbxOutput.Clear();
         }
      
 
