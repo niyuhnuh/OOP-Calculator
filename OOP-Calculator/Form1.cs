@@ -23,7 +23,7 @@ namespace OOP_Calculator
             InitializeComponent();
         }
 
-
+        //Start of clear button function code
         private void clear_Btn_Click(object sender, EventArgs e)
         {
             txtbxOutput.Clear();
@@ -36,7 +36,9 @@ namespace OOP_Calculator
             btn_Mplus.Enabled = false;
             btn_Mminus.Enabled = false;
         }
+        //End of clear button function code
 
+        //Start of backspace button function code
         private void back_Btn_Click(object sender, EventArgs e)
         {
             int len = txtbxOutput.TextLength - 1;
@@ -50,7 +52,18 @@ namespace OOP_Calculator
                 txtbxOutput.Text = "0";
                 lbl_View.Text = "0";             
         }
+        //End of backspace button function code
 
+
+        //Start of clear entry button function code
+        private void ce_btn_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Text = "0";
+            lbl_View.Text = input1.ToString();
+        }
+        //End of clear entry button function code
+
+        //Start of button numbers assignment code
         private void numBtn_click(object sender, EventArgs e)
         {
             if (txtbxOutput.Text == "0")
@@ -60,7 +73,9 @@ namespace OOP_Calculator
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
             lbl_View.Text = txtbxOutput.Text;
         }
+        //End of button numbers assignment code
 
+        //Start of addition operation code
         private void add_Sign_Click(object sender, EventArgs e)
         {
             if (input1 != 0)
@@ -78,7 +93,9 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
         }
+        //End of addition operation code
 
+        //Start of subtraction operation code
         private void sub_Sign_Click(object sender, EventArgs e)
         {
             if (input1 != 0)
@@ -96,7 +113,9 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }
         }
+        //End of subtraction operation code
 
+        //Start of multiplication operation code
         private void mul_Sign_Click(object sender, EventArgs e)
         {
             if (input1 != 0)
@@ -115,7 +134,9 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
             }
         }
+        //End of multiplication operation code
 
+        //Start of division operation code
         private void div_Sign_Click(object sender, EventArgs e)
         {
             if (input1 != 0)
@@ -134,13 +155,9 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
         }
+        //End of division operation code
 
-        private void ce_btn_Click(object sender, EventArgs e)
-        {
-            txtbxOutput.Text = "0";
-            lbl_View.Text = input1.ToString();
-        }
-
+        //Start of equals button function code
         private void equals_Btn_Click(object sender, EventArgs e)
         {
 
@@ -259,6 +276,7 @@ namespace OOP_Calculator
                 }
             }
         }
+        //End of equals button function code
 
         private void decBtn_click(object sender, EventArgs e)
         {
