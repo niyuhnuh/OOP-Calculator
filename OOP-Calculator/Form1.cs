@@ -317,7 +317,7 @@ namespace OOP_Calculator
  
             txtbx_Saved1.Visible = true;
             txtbx_Saved1.Text = txtbxOutput.Text;
-            txtbxOutput.Clear();
+            txtbxOutput.Text = "0";
             lbl_View.Text = txtbxOutput.Text;
            
         }
@@ -355,10 +355,6 @@ namespace OOP_Calculator
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
         {
