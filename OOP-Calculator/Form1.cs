@@ -27,6 +27,7 @@ namespace OOP_Calculator
         private void clear_Btn_Click(object sender, EventArgs e)
         {
             txtbxOutput.Clear();
+            txtbx_Saved1.Clear();
             txtbxOutput.Text = "0";
             input1 = 0;
             lbl_View.Text = "0";
@@ -350,12 +351,6 @@ namespace OOP_Calculator
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = txtbxOutput.Text;
             }
-        }
-     
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void btn_Mminus_Click(object sender, EventArgs e)
