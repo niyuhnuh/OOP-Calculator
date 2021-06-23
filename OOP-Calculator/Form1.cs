@@ -169,15 +169,6 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
-                        else if (memoryPlusIsClicked == true)
-                        {
-                            input2 = Double.Parse(txtbx_Saved1.Text);
-                            answer = input1 + input2;
-                            lbl_View.Text = answer.ToString();
-                            input1 = answer;
-                            txtbxOutput.Text = "0";
-                            break;
-                        }
                         else
                         {
                             double percent;
@@ -344,7 +335,14 @@ namespace OOP_Calculator
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
             memoryPlusIsClicked = true;
+            if (memoryPlusIsClicked == true)
+            {
+                equals_Btn.PerformClick();
+                operatorUse = add_Sign.Text;
+            }
+            
             txtbxOutput.Clear();
+            lbl_View.Text = lbl_View.Text + add_Sign.Text;
         }
      
 
