@@ -63,6 +63,22 @@ namespace OOP_Calculator
         }
         //End of clear entry button function code
 
+        //Start of decimal button function code
+        private void decBtn_click(object sender, EventArgs e)
+        {
+            if (!txtbxOutput.Text.Contains("."))
+            {
+                txtbxOutput.Text = txtbxOutput.Text + dec_Btn.Text;
+                lbl_View.Text = txtbxOutput.Text;
+            }
+            else if (txtbxOutput.Text.Contains("."))
+            {
+                txtbxOutput.Text = txtbxOutput.Text;
+                lbl_View.Text = txtbxOutput.Text;
+            }
+        }
+        //End of decimal button function code
+
         //Start of button numbers assignment code
         private void numBtn_click(object sender, EventArgs e)
         {
@@ -278,19 +294,7 @@ namespace OOP_Calculator
         }
         //End of equals button function code
 
-        private void decBtn_click(object sender, EventArgs e)
-        {
-            if (!txtbxOutput.Text.Contains("."))
-            {
-                txtbxOutput.Text = txtbxOutput.Text + dec_Btn.Text;
-                lbl_View.Text = txtbxOutput.Text;
-            }
-            else if (txtbxOutput.Text.Contains("."))
-            {
-                txtbxOutput.Text = txtbxOutput.Text;
-                lbl_View.Text = txtbxOutput.Text;
-            }
-        }
+
 
         private void btn_Percent_Click(object sender, EventArgs e)
         {
