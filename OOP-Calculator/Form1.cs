@@ -337,13 +337,11 @@ namespace OOP_Calculator
             memoryPlusIsClicked = true;
             if (memoryPlusIsClicked == true)
             {
-                //equals_Btn.PerformClick();
-                //operatorUse = add_Sign.Text;
                 double input5 = Double.Parse(txtbx_Saved1.Text);
                 double answer;
-                answer = input1 + input5;
+                answer = Double.Parse(lbl_View.Text) + input5;
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = lbl_View.Text + add_Sign.Text + txtbx_Saved1.Text;
+                lbl_View.Text = txtbxOutput.Text;
             }
 
         }
