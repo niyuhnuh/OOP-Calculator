@@ -12,12 +12,12 @@ namespace OOP_Calculator
 {
     public partial class Form1 : Form
     {
-        Double input1 = 0;
-        Double input2;
-        String operatorUse = "";
-        bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false;
+        Double input1 = 0; //Assigning a double variable for storing the first input 
+        Double input2;     //Assigning a double variable for storing the second input
+        String operatorUse = ""; //Assigning an empty string for operators to be use in arithmetic operations 
+        bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false; //Boolean variables to perform specific operations
 
-        
+
         public Form1()
         {
             InitializeComponent();
