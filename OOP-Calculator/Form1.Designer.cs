@@ -422,6 +422,7 @@ namespace OOP_Calculator
             this.txtbx_Saved1.Name = "txtbx_Saved1";
             this.txtbx_Saved1.Size = new System.Drawing.Size(100, 23);
             this.txtbx_Saved1.TabIndex = 45;
+            this.txtbx_Saved1.TextChanged += new System.EventHandler(this.txtbx_Saved1_TextChanged);
             // 
             // Form1
             // 

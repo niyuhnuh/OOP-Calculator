@@ -357,21 +357,15 @@ namespace OOP_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtbx_Saved1.Text))
-            {
-                txtbx_Saved1.Visible = true;
-            }
-            else
-            {
-                txtbx_Saved1.Visible = true;
-                txtbx_Saved1.Text = txtbxOutput.Text;
-                txtbxOutput.Clear();
-                lbl_View.Text = txtbxOutput.Text;
-                btn_Mminus.Enabled = true;
-                btn_Mplus.Enabled = true;
-                btn_MR.Enabled = true;
-                btn_MC.Enabled = true;
-            }
+            
+        }
+
+        private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
+        {
+             btn_Mminus.Enabled = true;
+             btn_Mplus.Enabled = true;
+             btn_MR.Enabled = true;
+             btn_MC.Enabled = true;     
         }
 
         private void btn_Sqrt_Click(object sender, EventArgs e)
