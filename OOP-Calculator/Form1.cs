@@ -31,6 +31,10 @@ namespace OOP_Calculator
             txtbxOutput.Text = "0";
             input1 = 0;
             lbl_View.Text = "0";
+            btn_MC.Enabled = false;
+            btn_MR.Enabled = false;
+            btn_Mplus.Enabled = false;
+            btn_Mminus.Enabled = false;
         }
 
         private void back_Btn_Click(object sender, EventArgs e)
@@ -314,7 +318,6 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
- 
             txtbx_Saved1.Visible = true;
             txtbx_Saved1.Text = txtbxOutput.Text;
             txtbxOutput.Text = "0";
@@ -357,7 +360,7 @@ namespace OOP_Calculator
 
 
         private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
-        {
+        { 
              btn_Mminus.Enabled = true;
              btn_Mplus.Enabled = true;
              btn_MR.Enabled = true;
