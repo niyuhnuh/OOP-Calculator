@@ -431,6 +431,7 @@ namespace OOP_Calculator
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                lbl_View.Text = txtbxOutput.Text;
             }
         }
 
