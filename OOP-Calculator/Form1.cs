@@ -89,9 +89,10 @@ namespace OOP_Calculator
         //Start of button numbers assignment code
         private void numBtn_click(object sender, EventArgs e)
         {
+            //This if statement prevents an excess of zeroes appearing 
             if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear();
-
+                txtbxOutput.Clear(); //Clears the zero when a number button is pressed
+            //This bit of code sets all the numbers of the buttons
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
             lbl_View.Text = txtbxOutput.Text;
