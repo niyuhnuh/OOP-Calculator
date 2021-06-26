@@ -185,6 +185,7 @@ namespace OOP_Calculator
             this.txtbxOutput.TabIndex = 19;
             this.txtbxOutput.Text = "0";
             this.txtbxOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtbxOutput.Click += new System.EventHandler(this.txtbxOutput_Click);
             this.txtbxOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxOutput_KeyPress);
             // 
             // clear_Btn

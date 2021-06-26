@@ -435,7 +435,13 @@ namespace OOP_Calculator
             }
         }
 
-        
+        private void txtbxOutput_Click(object sender, EventArgs e)
+        {
+            txtbxOutput.Clear();
+            lbl_View.Text = txtbxOutput.Text;
+        }
+
+
 
         //Start of square root function code
         private void btn_Sqrt_Click(object sender, EventArgs e)
