@@ -432,7 +432,13 @@ namespace OOP_Calculator
             {
                 e.Handled = true;
                 lbl_View.Text = txtbxOutput.Text;
+ 
             }
+            else if (!char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            
         }
 
         private void txtbxOutput_Click(object sender, EventArgs e)
