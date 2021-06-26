@@ -196,7 +196,7 @@ namespace OOP_Calculator
             double answer;
 
             //This try-catch-finally syntax was placed to solve the format exception which causes
-            //
+            //the input1 answer to do the operation twice without input2 yet
             try
             {
                 input2 = Double.Parse(txtbxOutput.Text);
@@ -207,7 +207,7 @@ namespace OOP_Calculator
             }
             finally
             {
-
+                //Switch-case syntax to run code depending on the operatorUse clicked
                 switch (operatorUse)
                 {
 
