@@ -71,12 +71,14 @@ namespace OOP_Calculator
         //Start of decimal button function code
         private void decBtn_click(object sender, EventArgs e)
         {
+            //This if-else statement checks if the current input already has a decimal in it
             if (!txtbxOutput.Text.Contains("."))
             {
                 txtbxOutput.Text = txtbxOutput.Text + dec_Btn.Text;
                 lbl_View.Text = txtbxOutput.Text;
             }
-            else if (txtbxOutput.Text.Contains("."))
+            //If it does, the current text would remain
+            else if (txtbxOutput.Text.Contains(".")) 
             {
                 txtbxOutput.Text = txtbxOutput.Text;
                 lbl_View.Text = txtbxOutput.Text;
