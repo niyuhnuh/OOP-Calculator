@@ -124,15 +124,17 @@ namespace OOP_Calculator
         //Start of subtraction operation code
         private void sub_Sign_Click(object sender, EventArgs e)
         {
+            //This if statement takes care of the successive subtraction of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick();
-                operatorUse = sub_Sign.Text;
+                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
+                operatorUse = sub_Sign.Text;//Identifies which case to execute in the switch
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }          
             else
             {
+                //Follows the regular subtraction syntax
                 operatorUse = sub_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
