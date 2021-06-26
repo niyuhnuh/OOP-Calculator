@@ -128,7 +128,7 @@ namespace OOP_Calculator
             if (input1 != 0)
             {
                 equals_Btn.PerformClick(); //Calls the code when equals button is pressed
-                operatorUse = sub_Sign.Text;//Identifies which case to execute in the switch
+                operatorUse = sub_Sign.Text; //Identifies which case to execute in the switch
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }          
@@ -146,16 +146,18 @@ namespace OOP_Calculator
         //Start of multiplication operation code
         private void mul_Sign_Click(object sender, EventArgs e)
         {
+            //This if statement takes care of the successive multiplication of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick();
-                operatorUse = mul_Sign.Text;
+                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
+                operatorUse = mul_Sign.Text; //Identifies which case to execute in the switch
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
             }
          
             else
             {
+                //Follows the regular multiplication syntax
                 operatorUse = mul_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
@@ -167,16 +169,18 @@ namespace OOP_Calculator
         //Start of division operation code
         private void div_Sign_Click(object sender, EventArgs e)
         {
+            //This if statement takes care of the successive division of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick();
-                operatorUse = div_Sign.Text;
+                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
+                operatorUse = div_Sign.Text; //Identifies which case to execute in the switch
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
           
             else
             {
+                //Follows the regular subtraction syntax
                 operatorUse = div_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
