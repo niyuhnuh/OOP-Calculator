@@ -211,7 +211,8 @@ namespace OOP_Calculator
                 switch (operatorUse)
                 {
 
-                    case "+":
+                    case "+": //Addition
+                        //This statement checks if the percent button is clicked
                         if (percentIsClicked == false)
                         {
                             answer = input1 + input2;
@@ -220,6 +221,8 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
+                        //When it is, it converts the second input to a percent similar to the function of 
+                        //a regular calculator
                         else
                         {
                             double percent;
@@ -233,7 +236,8 @@ namespace OOP_Calculator
                         }
                   
 
-                    case "-":
+                    case "-"://Subtraction
+                        //This statement checks if the percent button is clicked
                         if (percentIsClicked == false)
                         {
                             answer = (input1 - input2);
@@ -242,6 +246,8 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
+                        //When it is, it converts the second input to a percent similar to the function of 
+                        //a regular calculator
                         else
                         {
                             double percent;
@@ -254,7 +260,8 @@ namespace OOP_Calculator
                             break;
                         }
                        
-                    case "*":
+                    case "*"://Multiplication
+                        //This statement checks if the percent button is clicked
                         if (percentIsClicked == false)
                         {
                             answer = (input1 * input2);
@@ -263,6 +270,8 @@ namespace OOP_Calculator
                             txtbxOutput.Text = "0";
                             break;
                         }
+                        //When it is, it converts the second input to a percent similar to the function of 
+                        //a regular calculator
                         else
                         {
                             double percent;
@@ -275,9 +284,11 @@ namespace OOP_Calculator
                             break;
                         }
                             
-                    case "/":
+                    case "/": //Division
+                        //This if-statement checks first if the second input is 0
                         if (input2 != 0)
                         {
+                            //This statement checks if the percent button is clicked
                             if (percentIsClicked == false)
                             {
                                 answer = (input1 / input2);
@@ -285,6 +296,8 @@ namespace OOP_Calculator
                                 input1 = answer;
                                 txtbxOutput.Clear();
                             }
+                            //When it is, it converts the second input to a percent similar to the function of 
+                            //a regular calculator
                             else
                             {
                                 double percent;
@@ -297,6 +310,7 @@ namespace OOP_Calculator
                             }
                                 
                         }
+                        //This statement is executed when the second input is 0
                         else
                         {
                             MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
