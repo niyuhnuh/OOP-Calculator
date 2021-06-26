@@ -329,6 +329,7 @@ namespace OOP_Calculator
         //Start of percent button function code
         private void btn_Percent_Click(object sender, EventArgs e)
         {
+            //A boolean variable used to execute the method
             percentIsClicked = true;
         }
         //End of percent button function code
