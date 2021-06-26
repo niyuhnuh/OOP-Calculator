@@ -428,15 +428,15 @@ namespace OOP_Calculator
 
         private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) || (!char.IsSymbol(e.KeyChar)))
             {
                 e.Handled = true;
                 lbl_View.Text = txtbxOutput.Text;
  
             }
-            else if (!char.IsSymbol(e.KeyChar))
+            //else if (!char.IsControl(e.KeyChar) && !char.IsSymbol(e.KeyChar))
             {
-                e.Handled = true;
+               //e.Handled = true;
             }
             
         }
