@@ -195,7 +195,8 @@ namespace OOP_Calculator
 
             double answer;
 
-
+            //This try-catch-finally syntax was placed to solve the format exception which causes
+            //
             try
             {
                 input2 = Double.Parse(txtbxOutput.Text);
