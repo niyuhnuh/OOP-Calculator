@@ -425,6 +425,17 @@ namespace OOP_Calculator
         }
         //End of memory save textbox function code
 
+
+        private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        
+
         //Start of square root function code
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
