@@ -425,7 +425,7 @@ namespace OOP_Calculator
         }
         //End of memory save textbox function code
 
-
+        //Start of Keypress event
         private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -435,13 +435,15 @@ namespace OOP_Calculator
  
             }
         }
+        //End of Keypress event
 
+        //Start of txtbxOutput Click event
         private void txtbxOutput_Click(object sender, EventArgs e)
         {
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
         }
-
+        //End of txtbxOutput Click event
 
 
         //Start of square root function code
