@@ -102,15 +102,17 @@ namespace OOP_Calculator
         //Start of addition operation code
         private void add_Sign_Click(object sender, EventArgs e)
         {
+            //This if statement takes care of the successive addition of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick();
-                operatorUse = add_Sign.Text;
+                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
+                operatorUse = add_Sign.Text; //Identifies which case to execute in the switch
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
             else
             {
+                //Follows the regular addition syntax
                 operatorUse = add_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
