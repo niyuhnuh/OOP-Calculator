@@ -180,7 +180,7 @@ namespace OOP_Calculator
           
             else
             {
-                //Follows the regular subtraction syntax
+                //Follows the regular division syntax
                 operatorUse = div_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
