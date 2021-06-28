@@ -341,7 +341,7 @@ namespace OOP_Calculator
             double input5;
             double answer;
             input5 = Double.Parse(txtbxOutput.Text);
-
+            // This if-statement checks if the input is already negative
             if (txtbxOutput.Text.Contains("-"))
             {
                 answer = Math.Abs(input5);
@@ -350,6 +350,7 @@ namespace OOP_Calculator
                 
                 answer = input1;
             }
+            //This checks if the input is 0 and thus cannot be positive nor negative
             else if (input5 == 0)
             {
                 txtbxOutput.Text = "0";
@@ -357,6 +358,7 @@ namespace OOP_Calculator
 
                 answer = input1;
             }
+            //This is run when the input is positive and will be turned negative
             else
             {
                 answer = input5 * -1;
@@ -428,6 +430,8 @@ namespace OOP_Calculator
         //Start of Keypress event
         private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Checks if the key pressed is a digit and a control
+            //Does not need to check if its a number from the top of the keyboard or from the numpad
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
