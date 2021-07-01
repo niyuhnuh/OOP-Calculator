@@ -65,6 +65,12 @@ namespace OOP_Calculator
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtbx_Saved1 = new System.Windows.Forms.TextBox();
+            this.tb_HistoryMem = new System.Windows.Forms.TabControl();
+            this.tbp_History = new System.Windows.Forms.TabPage();
+            this.tbp_Memory = new System.Windows.Forms.TabPage();
+            this.rtxtbx_History = new System.Windows.Forms.RichTextBox();
+            this.tb_HistoryMem.SuspendLayout();
+            this.tbp_History.SuspendLayout();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -426,11 +432,51 @@ namespace OOP_Calculator
             this.txtbx_Saved1.TabIndex = 45;
             this.txtbx_Saved1.TextChanged += new System.EventHandler(this.txtbx_Saved1_TextChanged);
             // 
+            // tb_HistoryMem
+            // 
+            this.tb_HistoryMem.Controls.Add(this.tbp_History);
+            this.tb_HistoryMem.Controls.Add(this.tbp_Memory);
+            this.tb_HistoryMem.Location = new System.Drawing.Point(232, 84);
+            this.tb_HistoryMem.Name = "tb_HistoryMem";
+            this.tb_HistoryMem.SelectedIndex = 0;
+            this.tb_HistoryMem.Size = new System.Drawing.Size(200, 303);
+            this.tb_HistoryMem.TabIndex = 46;
+            // 
+            // tbp_History
+            // 
+            this.tbp_History.Controls.Add(this.rtxtbx_History);
+            this.tbp_History.Location = new System.Drawing.Point(4, 24);
+            this.tbp_History.Name = "tbp_History";
+            this.tbp_History.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_History.Size = new System.Drawing.Size(192, 275);
+            this.tbp_History.TabIndex = 0;
+            this.tbp_History.Text = "History";
+            this.tbp_History.UseVisualStyleBackColor = true;
+            // 
+            // tbp_Memory
+            // 
+            this.tbp_Memory.Location = new System.Drawing.Point(4, 24);
+            this.tbp_Memory.Name = "tbp_Memory";
+            this.tbp_Memory.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp_Memory.Size = new System.Drawing.Size(192, 275);
+            this.tbp_Memory.TabIndex = 1;
+            this.tbp_Memory.Text = "Memory";
+            this.tbp_Memory.UseVisualStyleBackColor = true;
+            // 
+            // rtxtbx_History
+            // 
+            this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
+            this.rtxtbx_History.Name = "rtxtbx_History";
+            this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
+            this.rtxtbx_History.TabIndex = 0;
+            this.rtxtbx_History.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 399);
+            this.ClientSize = new System.Drawing.Size(436, 399);
+            this.Controls.Add(this.tb_HistoryMem);
             this.Controls.Add(this.txtbx_Saved1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_View);
@@ -469,6 +515,8 @@ namespace OOP_Calculator
             this.Controls.Add(this.dividebtn);
             this.Name = "Form1";
             this.Text = "Calculator";
+            this.tb_HistoryMem.ResumeLayout(false);
+            this.tbp_History.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,6 +559,10 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtbx_Saved1;
+        private System.Windows.Forms.TabControl tb_HistoryMem;
+        private System.Windows.Forms.TabPage tbp_History;
+        private System.Windows.Forms.RichTextBox rtxtbx_History;
+        private System.Windows.Forms.TabPage tbp_Memory;
     }
 }
 

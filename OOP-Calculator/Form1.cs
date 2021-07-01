@@ -192,9 +192,7 @@ namespace OOP_Calculator
         //Start of equals button function code
         private void equals_Btn_Click(object sender, EventArgs e)
         {
-
             double answer;
-
             //This try-catch-finally syntax was placed to solve the format exception which causes
             //the input1 answer to do the operation twice without input2 yet
             try
@@ -235,7 +233,6 @@ namespace OOP_Calculator
                             break;
                         }
                   
-
                     case "-"://Subtraction
                         //This statement checks if the percent button is clicked
                         if (percentIsClicked == false)
