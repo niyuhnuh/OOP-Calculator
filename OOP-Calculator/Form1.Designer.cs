@@ -69,8 +69,10 @@ namespace OOP_Calculator
             this.tbp_History = new System.Windows.Forms.TabPage();
             this.tbp_Memory = new System.Windows.Forms.TabPage();
             this.rtxtbx_History = new System.Windows.Forms.RichTextBox();
+            this.lst_Memory = new System.Windows.Forms.ListBox();
             this.tb_HistoryMem.SuspendLayout();
             this.tbp_History.SuspendLayout();
+            this.tbp_Memory.SuspendLayout();
             this.SuspendLayout();
             // 
             // dividebtn
@@ -455,6 +457,7 @@ namespace OOP_Calculator
             // 
             // tbp_Memory
             // 
+            this.tbp_Memory.Controls.Add(this.lst_Memory);
             this.tbp_Memory.Location = new System.Drawing.Point(4, 24);
             this.tbp_Memory.Name = "tbp_Memory";
             this.tbp_Memory.Padding = new System.Windows.Forms.Padding(3);
@@ -470,6 +473,15 @@ namespace OOP_Calculator
             this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
             this.rtxtbx_History.TabIndex = 0;
             this.rtxtbx_History.Text = "";
+            // 
+            // lst_Memory
+            // 
+            this.lst_Memory.FormattingEnabled = true;
+            this.lst_Memory.ItemHeight = 15;
+            this.lst_Memory.Location = new System.Drawing.Point(3, 0);
+            this.lst_Memory.Name = "lst_Memory";
+            this.lst_Memory.Size = new System.Drawing.Size(185, 274);
+            this.lst_Memory.TabIndex = 0;
             // 
             // Form1
             // 
@@ -517,6 +529,7 @@ namespace OOP_Calculator
             this.Text = "Calculator";
             this.tb_HistoryMem.ResumeLayout(false);
             this.tbp_History.ResumeLayout(false);
+            this.tbp_Memory.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,6 +576,7 @@ namespace OOP_Calculator
         private System.Windows.Forms.TabPage tbp_History;
         private System.Windows.Forms.RichTextBox rtxtbx_History;
         private System.Windows.Forms.TabPage tbp_Memory;
+        private System.Windows.Forms.ListBox lst_Memory;
     }
 }
 
