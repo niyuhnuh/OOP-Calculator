@@ -24,6 +24,18 @@ namespace OOP_Calculator
 
         private void clear_Btn_Click(object sender, EventArgs e)
         {
+            var sequence = lbl_View.Text;
+            var final = txtbxOutput.Text;
+
+            if (rtxtbx_History.Text == "")
+            {
+                rtxtbx_History.Text = sequence + "\n =" + final;
+            }
+            else
+            {
+                rtxtbx_History.AppendText("\n \n" + sequence + "\n =" + final);
+            }
+
             txtbxOutput.Clear();
             txtbxOutput.Text = "0";
             input1 = 0;
@@ -297,17 +309,20 @@ namespace OOP_Calculator
             {
                 answer = Math.Abs(input5);
                 txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = answer.ToString();
                 answer = input1;
             }
             else if (input5 == 0)
             {
                 txtbxOutput.Text = "0";
+                lbl_View.Text = "0";
                 answer = input1;
             }
             else
             {
                 answer = input5 * -1;
                 txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = answer.ToString();
                 answer = input1;
             }
         }
