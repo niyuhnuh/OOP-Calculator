@@ -329,6 +329,14 @@ namespace OOP_Calculator
             double answer;
             input4 = Double.Parse(txtbxOutput.Text);
 
+            if (input4 >= 0 && sqrtIsClicked == true && !(operatorUse == ""))
+            {
+                lbl_View.Text = "";
+                answer = Math.Sqrt(input4);
+                lbl_View.Text = lbl_View.Text + "√" + input4 + operatorUse;
+                input1 = answer;
+                txtbxOutput.Text = answer.ToString();
+            }
             if (input4 < 0 && sqrtIsClicked == true)
             {
                 MessageBox.Show("Math error. Imaginary number. Please input a real number.");
@@ -336,10 +344,10 @@ namespace OOP_Calculator
                 txtbxOutput.Text = "0";
                 input1 = 0;
             }
-            else if(input4 >= 0 && sqrtIsClicked == true)
+            else if (input4 >= 0 && sqrtIsClicked == true)
             {
                 answer = Math.Sqrt(input4);
-                lbl_View.Text = lbl_View.Text +  "√" + input4;
+                lbl_View.Text = lbl_View.Text + "√" + input4;
                 txtbxOutput.Text = answer.ToString();
             }
         }
