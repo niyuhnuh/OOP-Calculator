@@ -216,34 +216,12 @@ namespace OOP_Calculator
                         txtbxOutput.Text = operation.txtbx_Output;
                         break;
                     case "/": //Division
-                        if (input2 != 0)
-                        {
-                            if (percentIsClicked == false)
-                            {
-                                answer = (input1 / input2);
-                                input1 = answer;
-                                txtbxOutput.Text = answer.ToString();
-                            }
-
-                            else
-                            {
-                                double percent;
-                                percent = (input2 / 100);
-
-                                answer = (input1 / percent);
-                                input1 = answer;
-                                txtbxOutput.Text = answer.ToString();
-                                lbl_View.Text = lbl_View.Text + "[" + percent + "]";
-                            }     
-                        }
-                        else
-                        {
-                            MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
-                            txtbxOutput.Clear();
-                            txtbxOutput.Text = "0";
-                            input1 = 0;
-                            lbl_View.Text = "Divide by 0 Error";
-                        }
+                        operation.percentIsClicked = percentIsClicked;
+                        operation.txtbx_Output = txtbxOutput.Text;
+                        operation.lbl_View = lbl_View.Text;
+                        operation.Division();
+                        lbl_View.Text = operation.lbl_View;
+                        txtbxOutput.Text = operation.txtbx_Output;
                         break;
                 }
             }
