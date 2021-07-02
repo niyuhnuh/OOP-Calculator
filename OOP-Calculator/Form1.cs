@@ -21,7 +21,7 @@ namespace OOP_Calculator
         {
             InitializeComponent();
         }
-
+        operationsClass operation = new operationsClass();
         private void clear_Btn_Click(object sender, EventArgs e)
         {
             var sequence = lbl_View.Text;
@@ -179,6 +179,8 @@ namespace OOP_Calculator
             try
             {
                 input2 = Double.Parse(txtbxOutput.Text);
+                operation.input1 = input1;
+                operation.input2 = input2;
             }
             catch(System.FormatException)
             {
