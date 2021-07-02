@@ -29,11 +29,11 @@ namespace OOP_Calculator
 
             if (rtxtbx_History.Text == "")
             {
-                rtxtbx_History.Text = sequence + "\n =" + final;
+                rtxtbx_History.Text = sequence + " =" + "\n" + final;
             }
             else
             {
-                rtxtbx_History.AppendText("\n \n" + sequence + "\n =" + final);
+                rtxtbx_History.AppendText("\n \n" + sequence + " =" + "\n" + final);
             }
 
             txtbxOutput.Clear();
