@@ -366,7 +366,6 @@ namespace OOP_Calculator
             {
                 e.Handled = true;
                 lbl_View.Text = txtbxOutput.Text;
- 
             }
         }
 
@@ -410,7 +409,7 @@ namespace OOP_Calculator
             {
                 double answer;
                 answer = (1 / input3);
-                lbl_View.Text = "(1/" + input3 + ")";
+                lbl_View.Text = lbl_View.Text + "(1/" + input3 + ")";
                 txtbxOutput.Text = answer.ToString();
             }
             else
@@ -419,7 +418,7 @@ namespace OOP_Calculator
                 txtbxOutput.Clear();
                 txtbxOutput.Text = "0";
                 input1 = 0;
-                lbl_View.Text = txtbxOutput.Text;
+                lbl_View.Text = "";
             }
         }
     }
