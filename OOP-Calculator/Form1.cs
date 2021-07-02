@@ -226,26 +226,21 @@ namespace OOP_Calculator
                         }
                   
                     case "-"://Subtraction
-                        //This statement checks if the percent button is clicked
                         if (percentIsClicked == false)
                         {
                             answer = (input1 - input2);
-                            lbl_View.Text = answer.ToString();
                             input1 = answer;
-                            txtbxOutput.Text = "0";
+                            txtbxOutput.Text = answer.ToString();
                             break;
                         }
-                        //When it is, it converts the second input to a percent similar to the function of 
-                        //a regular calculator
                         else
                         {
                             double percent;
                             percent = (input2 / 100) * input1;
 
                             answer = input1 - percent;
-                            lbl_View.Text = answer.ToString();
                             input1 = answer;
-                            txtbxOutput.Text = "0";
+                            txtbxOutput.Text = answer.ToString();
                             break;
                         }
                        
