@@ -306,6 +306,7 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
+            
             lst_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Text = "0";
             lbl_View.Text = "";
