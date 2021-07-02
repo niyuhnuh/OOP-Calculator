@@ -86,7 +86,6 @@ namespace OOP_Calculator
         }
         //End of decimal button function code
 
-        //Start of button numbers assignment code
         private void numBtn_click(object sender, EventArgs e)
         {
             //This if statement prevents an excess of zeroes appearing 
@@ -95,9 +94,8 @@ namespace OOP_Calculator
             //This bit of code sets all the numbers of the buttons
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
-            lbl_View.Text = txtbxOutput.Text;
+            lbl_View.Text = lbl_View.Text + button.Text;
         }
-        //End of button numbers assignment code
 
         //Start of addition operation code
         private void add_Sign_Click(object sender, EventArgs e)
