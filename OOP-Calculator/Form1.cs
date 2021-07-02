@@ -17,25 +17,21 @@ namespace OOP_Calculator
         String operatorUse = ""; //Assigning an empty string for operators to be use in arithmetic operations 
         bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false; //Boolean variables to perform specific operations
 
-
         public Form1()
         {
             InitializeComponent();
         }
 
-        //Start of clear button function code
         private void clear_Btn_Click(object sender, EventArgs e)
         {
             txtbxOutput.Clear();
-            txtbx_Saved1.Clear();
             txtbxOutput.Text = "0";
             input1 = 0;
-            lbl_View.Text = "0";
+            lbl_View.Text = "";
             btn_MC.Enabled = false;
             btn_MR.Enabled = false;
             btn_Mplus.Enabled = false;
             btn_Mminus.Enabled = false;
-            //Basically, restarts the entire calculator
         }
         //End of clear button function code
 
