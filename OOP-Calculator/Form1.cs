@@ -264,28 +264,23 @@ namespace OOP_Calculator
                         }
                             
                     case "/": //Division
-                        //This if-statement checks first if the second input is 0
                         if (input2 != 0)
                         {
-                            //This statement checks if the percent button is clicked
                             if (percentIsClicked == false)
                             {
                                 answer = (input1 / input2);
-                                lbl_View.Text = answer.ToString();
                                 input1 = answer;
-                                txtbxOutput.Clear();
+                                txtbxOutput.Text = answer.ToString();
                             }
-                            //When it is, it converts the second input to a percent similar to the function of 
-                            //a regular calculator
+
                             else
                             {
                                 double percent;
                                 percent = (input2 / 100);
 
-                                answer = input1 / percent;
-                                lbl_View.Text = answer.ToString();
+                                answer = (input1 / input2);
                                 input1 = answer;
-                                txtbxOutput.Clear();
+                                txtbxOutput.Text = answer.ToString();
                             }
                                 
                         }
@@ -296,7 +291,7 @@ namespace OOP_Calculator
                             txtbxOutput.Clear();
                             txtbxOutput.Text = "0";
                             input1 = 0;
-                            lbl_View.Text = txtbxOutput.Text;
+                            lbl_View.Text = "Divide by 0 Error";
                         }
                         break;
                 }
