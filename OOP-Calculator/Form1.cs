@@ -401,11 +401,21 @@ namespace OOP_Calculator
             double input3;
             input3 = Double.Parse(txtbxOutput.Text);
 
-            if (fractionIsClicked == true)
+            if ((fractionIsClicked == true) && (lbl_View.Text == txtbxOutput.Text))
             {
                 double answer;
                 answer = (1 / input3);
-                lbl_View.Text = lbl_View.Text + "(1/" + input3 + ")";
+                txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = "(1/" + input3 + ")";
+
+            }
+            else if (fractionIsClicked == true)
+            {
+                double answer;
+                answer = (1 / input3);
+                string fraction = lbl_View.Text;
+                string history = fraction.Remove(txtbxOutput.TextLength + 2);
+                lbl_View.Text = history + "(1/" + input3 + ")";
                 txtbxOutput.Text = answer.ToString();
             }
             else
