@@ -158,8 +158,9 @@ namespace OOP_Calculator
         {
             if (input1 != 0)
             {
-                equals_Btn.PerformClick(); 
-                operatorUse = div_Sign.Text; 
+                double answer;
+                answer = input1 / Double.Parse(txtbxOutput.Text);
+                input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
