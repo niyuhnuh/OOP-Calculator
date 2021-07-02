@@ -208,25 +208,13 @@ namespace OOP_Calculator
                         txtbxOutput.Text = operation.txtbx_Output;
                         break;
                     case "*"://Multiplication
-                        if (percentIsClicked == false)
-                        {
-                            answer = (input1 * input2);
-                            input1 = answer;
-                            txtbxOutput.Text = answer.ToString();
-                            break;
-                        }
-                        else
-                        {
-                            double percent;
-                            percent = (input2 / 100);
-
-                            answer = input1 * percent; 
-                            input1 = answer;
-                            txtbxOutput.Text = answer.ToString();
-                            lbl_View.Text = lbl_View.Text + "[" + percent + "]";
-                            break;
-                        }
-                            
+                        operation.percentIsClicked = percentIsClicked;
+                        operation.txtbx_Output = txtbxOutput.Text;
+                        operation.lbl_View = lbl_View.Text;
+                        operation.Multiplication();
+                        lbl_View.Text = operation.lbl_View;
+                        txtbxOutput.Text = operation.txtbx_Output;
+                        break;
                     case "/": //Division
                         if (input2 != 0)
                         {
