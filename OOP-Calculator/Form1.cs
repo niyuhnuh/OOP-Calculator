@@ -233,18 +233,18 @@ namespace OOP_Calculator
 
         private void btn_PM_Click(object sender, EventArgs e)
         {
-            double input5;
+            double input2;
             double answer;
-            input5 = Double.Parse(txtbxOutput.Text);
+            input2 = Double.Parse(txtbxOutput.Text);
 
             if (txtbxOutput.Text.Contains("-"))
             {
-                answer = Math.Abs(input5);
+                answer = Math.Abs(input2);
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = lbl_View.Text + "[" + answer + "]";
                 answer = input1;
             }
-            else if (input5 == 0)
+            else if (input2 == 0)
             {
                 txtbxOutput.Text = "0";
                 lbl_View.Text = "";
@@ -252,7 +252,7 @@ namespace OOP_Calculator
             }
             else
             {
-                answer = input5 * -1;
+                answer = input2 * -1;
                 txtbxOutput.Text = answer.ToString();
                 lbl_View.Text = lbl_View.Text + "[" + answer + "]";
                 answer = input1;
