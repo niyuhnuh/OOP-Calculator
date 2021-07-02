@@ -329,15 +329,12 @@ namespace OOP_Calculator
             }
         }
 
-        //Start of memory save button function code
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            txtbx_Saved1.Visible = true;
-            txtbx_Saved1.Text = txtbxOutput.Text;
+            lst_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Text = "0";
-            lbl_View.Text = txtbxOutput.Text;
+            lbl_View.Text = "";
         }
-        //End of memory save button function code
 
         //Start of memory clear button function code
         private void btn_MC_Click(object sender, EventArgs e)

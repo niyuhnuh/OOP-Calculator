@@ -64,7 +64,6 @@ namespace OOP_Calculator
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtbx_Saved1 = new System.Windows.Forms.TextBox();
             this.tb_HistoryMem = new System.Windows.Forms.TabControl();
             this.tbp_History = new System.Windows.Forms.TabPage();
             this.rtxtbx_History = new System.Windows.Forms.RichTextBox();
@@ -425,14 +424,6 @@ namespace OOP_Calculator
             this.button3.Text = "View";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // txtbx_Saved1
-            // 
-            this.txtbx_Saved1.Location = new System.Drawing.Point(263, 50);
-            this.txtbx_Saved1.Name = "txtbx_Saved1";
-            this.txtbx_Saved1.Size = new System.Drawing.Size(100, 23);
-            this.txtbx_Saved1.TabIndex = 45;
-            this.txtbx_Saved1.TextChanged += new System.EventHandler(this.txtbx_Saved1_TextChanged);
-            // 
             // tb_HistoryMem
             // 
             this.tb_HistoryMem.Controls.Add(this.tbp_History);
@@ -456,9 +447,8 @@ namespace OOP_Calculator
             // 
             // rtxtbx_History
             // 
-            this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
+            this.rtxtbx_History.Location = new System.Drawing.Point(-85, -67);
             this.rtxtbx_History.Name = "rtxtbx_History";
-            this.rtxtbx_History.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
             this.rtxtbx_History.TabIndex = 0;
             this.rtxtbx_History.Text = "";
@@ -489,7 +479,6 @@ namespace OOP_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 399);
             this.Controls.Add(this.tb_HistoryMem);
-            this.Controls.Add(this.txtbx_Saved1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_View);
             this.Controls.Add(this.button2);
@@ -571,7 +560,6 @@ namespace OOP_Calculator
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtbx_Saved1;
         private System.Windows.Forms.TabControl tb_HistoryMem;
         private System.Windows.Forms.TabPage tbp_History;
         private System.Windows.Forms.RichTextBox rtxtbx_History;
