@@ -15,7 +15,7 @@ namespace OOP_Calculator
         Double input1 = 0; //Assigning a double variable for storing the first input 
         Double input2;     //Assigning a double variable for storing the second input
         String operatorUse = ""; //Assigning an empty string for operators to be use in arithmetic operations 
-        bool percentIsClicked, fractionIsClicked, sqrtIsClicked = false; //Boolean variables to perform specific operations
+        bool percentIsClicked, fractionIsClicked, sqrtIsClicked, retrieved = false; //Boolean variables to perform specific operations
 
         public Form1()
         {
@@ -85,11 +85,13 @@ namespace OOP_Calculator
         }
 
         private void numBtn_click(object sender, EventArgs e)
-        {
-            //This if statement prevents an excess of zeroes appearing 
+        {    
             if (txtbxOutput.Text == "0")
-                txtbxOutput.Clear(); //Clears the zero when a number button is pressed
-            //This bit of code sets all the numbers of the buttons
+            {
+                txtbxOutput.Clear();
+                lbl_View.Text = "";
+            }
+ 
             Button button = (Button)sender;
             txtbxOutput.Text = txtbxOutput.Text + button.Text;
             lbl_View.Text = lbl_View.Text + button.Text;
@@ -255,8 +257,7 @@ namespace OOP_Calculator
                                 answer = (input1 / percent);
                                 input1 = answer;
                                 txtbxOutput.Text = answer.ToString();
-                            }
-                                
+                            }     
                         }
                         else
                         {
@@ -306,11 +307,10 @@ namespace OOP_Calculator
 
         private void btn_MS_Click(object sender, EventArgs e)
         {
-            
             lst_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Text = "0";
             lbl_View.Text = "";
-
+            retrieved = true;
             btn_Mminus.Enabled = true;
             btn_Mplus.Enabled = true;
             btn_MR.Enabled = true;
@@ -324,19 +324,22 @@ namespace OOP_Calculator
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            txtbxOutput.Clear();
-            string recall = lst_Memory.SelectedItem.ToString();
-            txtbxOutput.Text = txtbxOutput.Text + double.Parse(recall).ToString();
-            lbl_View.Text = lbl_View.Text + double.Parse(recall).ToString();
+            if (retrieved == true)
+            {
+                txtbxOutput.Clear();
+                string recall = lst_Memory.SelectedItem.ToString();
+                txtbxOutput.Text = txtbxOutput.Text + double.Parse(recall).ToString();
+                lbl_View.Text = lbl_View.Text + double.Parse(recall).ToString();
+                retrieved = false;
+            }
         }
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            //double input5 = Double.Parse(txtbx_Saved1.Text);
-            //double answer;
-            //answer = Double.Parse(lbl_View.Text) + input5;
-            //txtbxOutput.Text = answer.ToString();
-            //lbl_View.Text = txtbxOutput.Text;
+            double input2 = Double.Parse(lst_Memory.SelectedItem.ToString());
+            txtbxOutput.Clear();
+            txtbxOutput.Text = (input1 + input2).ToString();
+            lbl_View.Text = lbl_View.Text + add_Sign.Text + input2;
         }
 
         private void btn_Mminus_Click(object sender, EventArgs e)
