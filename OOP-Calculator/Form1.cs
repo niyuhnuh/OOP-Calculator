@@ -55,7 +55,6 @@ namespace OOP_Calculator
         {
             txtbxOutput.Text = "0";
         }
-        //End of clear entry button function code
 
         //Start of decimal button function code
         private void decBtn_click(object sender, EventArgs e)
@@ -285,46 +284,33 @@ namespace OOP_Calculator
 
         private void btn_Percent_Click(object sender, EventArgs e)
         {
-            //A boolean variable used to execute the method
             percentIsClicked = true;
         }
-        //End of percent button function code
 
-
-        //Start of positive/negative button function code
         private void btn_PM_Click(object sender, EventArgs e)
         {
             double input5;
             double answer;
             input5 = Double.Parse(txtbxOutput.Text);
-            // This if-statement checks if the input is already negative
+
             if (txtbxOutput.Text.Contains("-"))
             {
                 answer = Math.Abs(input5);
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = answer.ToString();
-                
                 answer = input1;
             }
-            //This checks if the input is 0 and thus cannot be positive nor negative
             else if (input5 == 0)
             {
                 txtbxOutput.Text = "0";
-                lbl_View.Text = txtbxOutput.Text;
-
                 answer = input1;
             }
-            //This is run when the input is positive and will be turned negative
             else
             {
                 answer = input5 * -1;
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = answer.ToString();
-
                 answer = input1;
             }
         }
-        //End of positive/negative button function code
 
         //Start of memory save button function code
         private void btn_MS_Click(object sender, EventArgs e)
