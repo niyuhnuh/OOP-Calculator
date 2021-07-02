@@ -278,7 +278,7 @@ namespace OOP_Calculator
                                 double percent;
                                 percent = (input2 / 100);
 
-                                answer = (input1 / input2);
+                                answer = (input1 / percent);
                                 input1 = answer;
                                 txtbxOutput.Text = answer.ToString();
                             }
