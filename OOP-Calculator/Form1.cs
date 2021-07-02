@@ -175,7 +175,6 @@ namespace OOP_Calculator
  
         private void equals_Btn_Click(object sender, EventArgs e)
         {
-            double answer;
             try
             {
                 input2 = Double.Parse(txtbxOutput.Text);
@@ -291,7 +290,7 @@ namespace OOP_Calculator
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            float input = float.Parse(lst_Memory.SelectedItem.ToString());
+            double input = double.Parse(lst_Memory.SelectedItem.ToString());
             double answer;
             answer = (Double.Parse(txtbxOutput.Text) + input);
             txtbxOutput.Text = answer.ToString();
@@ -348,33 +347,31 @@ namespace OOP_Calculator
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
-            
-            double input3;
-            input3 = Double.Parse(txtbxOutput.Text);
-            string input = lbl_View.Text;
+            double input2;
+            double answer;
+            input2 = Double.Parse(txtbxOutput.Text);
 
-            if ((fractionIsClicked == true) && (lbl_View.Text == txtbxOutput.Text))
+            if ((fractionIsClicked == true) && !(lbl_View.Text == txtbxOutput.Text))
             {
-                double answer;
-                answer = (1 / input3);
+                answer = (1 / input2);
+                lbl_View.Text = lbl_View.Text + "(1/" + input2 + ")" + operatorUse;
+                input1 = answer;
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = "(1/" + input3 + ")";
-
             }
-            else if (fractionIsClicked == true)
-            {
-                double answer;
-                answer = (1 / input3);
-                txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = input + "[" + "(1/" + input3 + ")"+"]";
-            }
-            else
+            if (fractionIsClicked == true && txtbxOutput.Text == "0")
             {
                 MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
                 txtbxOutput.Clear();
                 txtbxOutput.Text = "0";
                 input1 = 0;
                 lbl_View.Text = "";
+            }
+            else if (fractionIsClicked == true)
+            {
+                answer = (1 / input2);
+                txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = "(1/" + input2 + ")";
+                input1 = answer;
             }
         }
     }
