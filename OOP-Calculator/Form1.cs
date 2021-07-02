@@ -291,20 +291,20 @@ namespace OOP_Calculator
             {
                 answer = Math.Abs(input5);
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = answer.ToString();
+                lbl_View.Text = lbl_View.Text + "[" + answer + "]";
                 answer = input1;
             }
             else if (input5 == 0)
             {
                 txtbxOutput.Text = "0";
-                lbl_View.Text = "0";
+                lbl_View.Text = "";
                 answer = input1;
             }
             else
             {
                 answer = input5 * -1;
                 txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = answer.ToString();
+                lbl_View.Text = lbl_View.Text + "[" + answer + "]";
                 answer = input1;
             }
         }
@@ -364,6 +364,7 @@ namespace OOP_Calculator
                 lbl_View.Text = txtbxOutput.Text;
             }
         }
+
 
         private void txtbxOutput_Click(object sender, EventArgs e)
         {

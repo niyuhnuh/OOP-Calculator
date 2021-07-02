@@ -516,6 +516,7 @@ namespace OOP_Calculator
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.dividebtn);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.tb_HistoryMem.ResumeLayout(false);
             this.tbp_History.ResumeLayout(false);
