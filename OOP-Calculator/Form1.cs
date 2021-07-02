@@ -187,12 +187,9 @@ namespace OOP_Calculator
         }
         //End of division operation code
 
-        //Start of equals button function code
         private void equals_Btn_Click(object sender, EventArgs e)
         {
             double answer;
-            //This try-catch-finally syntax was placed to solve the format exception which causes
-            //the input1 answer to do the operation twice without input2 yet
             try
             {
                 input2 = Double.Parse(txtbxOutput.Text);
@@ -284,7 +281,6 @@ namespace OOP_Calculator
                             }
                                 
                         }
-                        //This statement is executed when the second input is 0
                         else
                         {
                             MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
@@ -297,10 +293,7 @@ namespace OOP_Calculator
                 }
             }
         }
-        //End of equals button function code
 
-
-        //Start of percent button function code
         private void btn_Percent_Click(object sender, EventArgs e)
         {
             //A boolean variable used to execute the method
