@@ -51,12 +51,9 @@ namespace OOP_Calculator
                 lbl_View.Text = "";             
         }
 
-        //Start of clear entry button function code
         private void ce_btn_Click(object sender, EventArgs e)
         {
-            //Clears the current entry
             txtbxOutput.Text = "0";
-            lbl_View.Text = input1.ToString();
         }
         //End of clear entry button function code
 
