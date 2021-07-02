@@ -40,10 +40,12 @@ namespace OOP_Calculator
             string val = txtbxOutput.Text;
             txtbxOutput.Clear();
 
-            for (int i = 0; i < len; i++) 
+            for (int i = 0; i < len; i++)
+            {
                 txtbxOutput.Text = txtbxOutput.Text + val[i];
-                lbl_View.Text = txtbxOutput.Text;
- 
+                lbl_View.Text = lbl_View.Text + val[i];
+            }
+
             if (len < 1)
                 txtbxOutput.Text = "0";
                 lbl_View.Text = "";             

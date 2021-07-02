@@ -67,8 +67,8 @@ namespace OOP_Calculator
             this.txtbx_Saved1 = new System.Windows.Forms.TextBox();
             this.tb_HistoryMem = new System.Windows.Forms.TabControl();
             this.tbp_History = new System.Windows.Forms.TabPage();
-            this.tbp_Memory = new System.Windows.Forms.TabPage();
             this.rtxtbx_History = new System.Windows.Forms.RichTextBox();
+            this.tbp_Memory = new System.Windows.Forms.TabPage();
             this.lst_Memory = new System.Windows.Forms.ListBox();
             this.tb_HistoryMem.SuspendLayout();
             this.tbp_History.SuspendLayout();
@@ -292,9 +292,8 @@ namespace OOP_Calculator
             this.lbl_View.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lbl_View.Location = new System.Drawing.Point(14, 28);
             this.lbl_View.Name = "lbl_View";
-            this.lbl_View.Size = new System.Drawing.Size(13, 15);
+            this.lbl_View.Size = new System.Drawing.Size(0, 15);
             this.lbl_View.TabIndex = 29;
-            this.lbl_View.Text = "0";
             // 
             // btn_Percent
             // 
@@ -455,6 +454,14 @@ namespace OOP_Calculator
             this.tbp_History.Text = "History";
             this.tbp_History.UseVisualStyleBackColor = true;
             // 
+            // rtxtbx_History
+            // 
+            this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
+            this.rtxtbx_History.Name = "rtxtbx_History";
+            this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
+            this.rtxtbx_History.TabIndex = 0;
+            this.rtxtbx_History.Text = "";
+            // 
             // tbp_Memory
             // 
             this.tbp_Memory.Controls.Add(this.lst_Memory);
@@ -465,14 +472,6 @@ namespace OOP_Calculator
             this.tbp_Memory.TabIndex = 1;
             this.tbp_Memory.Text = "Memory";
             this.tbp_Memory.UseVisualStyleBackColor = true;
-            // 
-            // rtxtbx_History
-            // 
-            this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
-            this.rtxtbx_History.Name = "rtxtbx_History";
-            this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
-            this.rtxtbx_History.TabIndex = 0;
-            this.rtxtbx_History.Text = "";
             // 
             // lst_Memory
             // 
