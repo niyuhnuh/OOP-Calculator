@@ -12,10 +12,10 @@ namespace OOP_Calculator
 {
     public partial class Form1 : Form
     {
-        Double input1 = 0; //Assigning a double variable for storing the first input 
-        Double input2;     //Assigning a double variable for storing the second input
-        String operatorUse = ""; //Assigning an empty string for operators to be use in arithmetic operations 
-        bool percentIsClicked, fractionIsClicked, sqrtIsClicked, retrieved = false; //Boolean variables to perform specific operations
+        Double input1 = 0; 
+        Double input2;     
+        String operatorUse = ""; 
+        bool percentIsClicked, fractionIsClicked, sqrtIsClicked, retrieved = false; 
 
         public Form1()
         {
@@ -364,7 +364,6 @@ namespace OOP_Calculator
                 lbl_View.Text = txtbxOutput.Text;
             }
         }
-
 
         private void txtbxOutput_Click(object sender, EventArgs e)
         {
