@@ -428,10 +428,10 @@ namespace OOP_Calculator
             // 
             this.tb_HistoryMem.Controls.Add(this.tbp_History);
             this.tb_HistoryMem.Controls.Add(this.tbp_Memory);
-            this.tb_HistoryMem.Location = new System.Drawing.Point(232, 84);
+            this.tb_HistoryMem.Location = new System.Drawing.Point(232, 50);
             this.tb_HistoryMem.Name = "tb_HistoryMem";
             this.tb_HistoryMem.SelectedIndex = 0;
-            this.tb_HistoryMem.Size = new System.Drawing.Size(200, 303);
+            this.tb_HistoryMem.Size = new System.Drawing.Size(200, 337);
             this.tb_HistoryMem.TabIndex = 46;
             // 
             // tbp_History
@@ -440,16 +440,17 @@ namespace OOP_Calculator
             this.tbp_History.Location = new System.Drawing.Point(4, 24);
             this.tbp_History.Name = "tbp_History";
             this.tbp_History.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_History.Size = new System.Drawing.Size(192, 275);
+            this.tbp_History.Size = new System.Drawing.Size(192, 309);
             this.tbp_History.TabIndex = 0;
             this.tbp_History.Text = "History";
             this.tbp_History.UseVisualStyleBackColor = true;
             // 
             // rtxtbx_History
             // 
-            this.rtxtbx_History.Location = new System.Drawing.Point(-85, -67);
+            this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
             this.rtxtbx_History.Name = "rtxtbx_History";
-            this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
+            this.rtxtbx_History.ReadOnly = true;
+            this.rtxtbx_History.Size = new System.Drawing.Size(185, 303);
             this.rtxtbx_History.TabIndex = 0;
             this.rtxtbx_History.Text = "";
             // 
@@ -459,7 +460,7 @@ namespace OOP_Calculator
             this.tbp_Memory.Location = new System.Drawing.Point(4, 24);
             this.tbp_Memory.Name = "tbp_Memory";
             this.tbp_Memory.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Memory.Size = new System.Drawing.Size(192, 275);
+            this.tbp_Memory.Size = new System.Drawing.Size(192, 309);
             this.tbp_Memory.TabIndex = 1;
             this.tbp_Memory.Text = "Memory";
             this.tbp_Memory.UseVisualStyleBackColor = true;
@@ -468,9 +469,9 @@ namespace OOP_Calculator
             // 
             this.lst_Memory.FormattingEnabled = true;
             this.lst_Memory.ItemHeight = 15;
-            this.lst_Memory.Location = new System.Drawing.Point(3, 0);
+            this.lst_Memory.Location = new System.Drawing.Point(3, 5);
             this.lst_Memory.Name = "lst_Memory";
-            this.lst_Memory.Size = new System.Drawing.Size(185, 274);
+            this.lst_Memory.Size = new System.Drawing.Size(185, 304);
             this.lst_Memory.TabIndex = 0;
             // 
             // Form1
