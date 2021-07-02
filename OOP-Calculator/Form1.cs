@@ -33,27 +33,21 @@ namespace OOP_Calculator
             btn_Mplus.Enabled = false;
             btn_Mminus.Enabled = false;
         }
-        //End of clear button function code
 
-        //Start of backspace button function code
         private void back_Btn_Click(object sender, EventArgs e)
         {
             int len = txtbxOutput.TextLength - 1;
             string val = txtbxOutput.Text;
             txtbxOutput.Clear();
 
-            //This for loop checks for the length of the text in txtbxOutput.Text
             for (int i = 0; i < len; i++) 
                 txtbxOutput.Text = txtbxOutput.Text + val[i];
                 lbl_View.Text = txtbxOutput.Text;
-            //This if statement checks if the length is less than 1
-            //Meaning if there is no longer any number to use the backspace function on, the default value of "0" would replace the text values
+ 
             if (len < 1)
                 txtbxOutput.Text = "0";
-                lbl_View.Text = "0";             
+                lbl_View.Text = "";             
         }
-        //End of backspace button function code
-
 
         //Start of clear entry button function code
         private void ce_btn_Click(object sender, EventArgs e)
