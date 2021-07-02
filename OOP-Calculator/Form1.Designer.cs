@@ -458,6 +458,7 @@ namespace OOP_Calculator
             // 
             this.rtxtbx_History.Location = new System.Drawing.Point(3, 3);
             this.rtxtbx_History.Name = "rtxtbx_History";
+            this.rtxtbx_History.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.rtxtbx_History.Size = new System.Drawing.Size(185, 269);
             this.rtxtbx_History.TabIndex = 0;
             this.rtxtbx_History.Text = "";
