@@ -336,27 +336,20 @@ namespace OOP_Calculator
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            double input2 = Double.Parse(lst_Memory.SelectedItem.ToString());
-            txtbxOutput.Clear();
-            txtbxOutput.Text = (input1 + input2).ToString();
-            lbl_View.Text = lbl_View.Text + add_Sign.Text + input2;
+            double input = Double.Parse(lst_Memory.SelectedItem.ToString());
+            double answer;
+            answer = (Double.Parse(txtbxOutput.Text) + input);
+            txtbxOutput.Text = answer.ToString();
+            lbl_View.Text = lbl_View.Text + add_Sign.Text + lst_Memory.SelectedItem;
         }
 
         private void btn_Mminus_Click(object sender, EventArgs e)
-        {  
-            //double input5 = Double.Parse(txtbx_Saved1.Text);
-            //double answer;
-            //answer = (Double.Parse(lbl_View.Text) - input5);
-            //txtbxOutput.Text = answer.ToString();
-            //lbl_View.Text = txtbxOutput.Text;
-        }
-
-        private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
-        { 
-             btn_Mminus.Enabled = true;
-             btn_Mplus.Enabled = true;
-             btn_MR.Enabled = true;
-             btn_MC.Enabled = true;     
+        {
+            double input = Double.Parse(lst_Memory.SelectedItem.ToString());
+            double answer;
+            answer = (Double.Parse(txtbxOutput.Text) - input);
+            txtbxOutput.Text = answer.ToString();
+            lbl_View.Text = lbl_View.Text + sub_Sign.Text + lst_Memory.SelectedItem;
         }
 
         private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
