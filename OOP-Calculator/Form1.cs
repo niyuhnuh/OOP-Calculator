@@ -340,7 +340,7 @@ namespace OOP_Calculator
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            double input = Double.Parse(lst_Memory.SelectedItem.ToString());
+            float input = float.Parse(lst_Memory.SelectedItem.ToString());
             double answer;
             answer = (Double.Parse(txtbxOutput.Text) + input);
             txtbxOutput.Text = answer.ToString();
@@ -400,7 +400,7 @@ namespace OOP_Calculator
             
             double input3;
             input3 = Double.Parse(txtbxOutput.Text);
-            string input = input3.ToString();
+            string input = lbl_View.Text;
 
             if ((fractionIsClicked == true) && (lbl_View.Text == txtbxOutput.Text))
             {
@@ -414,11 +414,8 @@ namespace OOP_Calculator
             {
                 double answer;
                 answer = (1 / input3);
-                int len = input.Length;
-                string fraction = lbl_View.Text;
-                string history = fraction.Remove(len - 1);
-                lbl_View.Text = history + "(1/" + input3 + ")";
                 txtbxOutput.Text = answer.ToString();
+                lbl_View.Text = input + "[" + "(1/" + input3 + ")"+"]";
             }
             else
             {
