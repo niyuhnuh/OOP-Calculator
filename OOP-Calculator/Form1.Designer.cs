@@ -399,7 +399,7 @@ namespace OOP_Calculator
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(341, 12);
+            this.button1.Location = new System.Drawing.Point(384, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(49, 23);
             this.button1.TabIndex = 39;
@@ -408,7 +408,7 @@ namespace OOP_Calculator
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 12);
+            this.button2.Location = new System.Drawing.Point(330, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 23);
             this.button2.TabIndex = 40;
@@ -417,7 +417,7 @@ namespace OOP_Calculator
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(232, 12);
+            this.button3.Location = new System.Drawing.Point(275, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(49, 23);
             this.button3.TabIndex = 43;

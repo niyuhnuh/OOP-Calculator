@@ -200,6 +200,7 @@ namespace OOP_Calculator
                             answer = input1 + percent;
                             input1 = answer;
                             txtbxOutput.Text = answer.ToString();
+                            lbl_View.Text = lbl_View.Text + "+" + percent;
                             break;
                         }
                     case "-"://Subtraction
@@ -218,6 +219,7 @@ namespace OOP_Calculator
                             answer = input1 - percent;
                             input1 = answer;
                             txtbxOutput.Text = answer.ToString();
+                            lbl_View.Text = lbl_View.Text + "-" + percent;
                             break;
                         }
                     case "*"://Multiplication
@@ -236,6 +238,7 @@ namespace OOP_Calculator
                             answer = input1 * percent; 
                             input1 = answer;
                             txtbxOutput.Text = answer.ToString();
+                            lbl_View.Text = lbl_View.Text + "*" + percent;
                             break;
                         }
                             
@@ -257,6 +260,7 @@ namespace OOP_Calculator
                                 answer = (input1 / percent);
                                 input1 = answer;
                                 txtbxOutput.Text = answer.ToString();
+                                lbl_View.Text = lbl_View.Text + "/" + percent;
                             }     
                         }
                         else
