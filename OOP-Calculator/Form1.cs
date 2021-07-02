@@ -160,31 +160,25 @@ namespace OOP_Calculator
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
             }
         }
-        //End of multiplication operation code
 
-        //Start of division operation code
         private void div_Sign_Click(object sender, EventArgs e)
         {
-            //This if statement takes care of the successive division of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
-                operatorUse = div_Sign.Text; //Identifies which case to execute in the switch
+                equals_Btn.PerformClick(); 
+                operatorUse = div_Sign.Text; 
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
-          
             else
             {
-                //Follows the regular division syntax
                 operatorUse = div_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
             }
         }
-        //End of division operation code
-
+ 
         private void equals_Btn_Click(object sender, EventArgs e)
         {
             double answer;
@@ -200,7 +194,6 @@ namespace OOP_Calculator
             {
                 switch (operatorUse)
                 {
-
                     case "+": //Addition
                         if (percentIsClicked == false)
                         {
@@ -219,7 +212,6 @@ namespace OOP_Calculator
                             txtbxOutput.Text = answer.ToString();
                             break;
                         }
-                  
                     case "-"://Subtraction
                         if (percentIsClicked == false)
                         {
@@ -238,7 +230,6 @@ namespace OOP_Calculator
                             txtbxOutput.Text = answer.ToString();
                             break;
                         }
-                       
                     case "*"://Multiplication
                         if (percentIsClicked == false)
                         {
@@ -342,7 +333,6 @@ namespace OOP_Calculator
             //txtbxOutput.Text = txtbx_Saved1.Text;
             //lbl_View.Text = txtbxOutput.Text;
         }
-
 
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
