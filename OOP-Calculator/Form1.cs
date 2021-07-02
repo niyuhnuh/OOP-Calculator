@@ -26,6 +26,8 @@ namespace OOP_Calculator
         {
             var sequence = lbl_View.Text;
             var final = txtbxOutput.Text;
+            rtxtbx_History.SelectAll();
+            rtxtbx_History.SelectionAlignment = HorizontalAlignment.Right;
 
             if (rtxtbx_History.Text == "")
             {
