@@ -471,6 +471,7 @@ namespace OOP_Calculator
             this.lst_Memory.ItemHeight = 15;
             this.lst_Memory.Location = new System.Drawing.Point(3, 5);
             this.lst_Memory.Name = "lst_Memory";
+            this.lst_Memory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lst_Memory.Size = new System.Drawing.Size(185, 304);
             this.lst_Memory.TabIndex = 0;
             // 

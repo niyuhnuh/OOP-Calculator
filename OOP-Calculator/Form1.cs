@@ -95,65 +95,53 @@ namespace OOP_Calculator
             lbl_View.Text = lbl_View.Text + button.Text;
         }
 
-        //Start of addition operation code
         private void add_Sign_Click(object sender, EventArgs e)
         {
-            //This if statement takes care of the successive addition of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
-                operatorUse = add_Sign.Text; //Identifies which case to execute in the switch
+                equals_Btn.PerformClick();
+                operatorUse = add_Sign.Text; 
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
             else
             {
-                //Follows the regular addition syntax
                 operatorUse = add_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
             }
         }
-        //End of addition operation code
 
-        //Start of subtraction operation code
         private void sub_Sign_Click(object sender, EventArgs e)
         {
-            //This if statement takes care of the successive subtraction of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
-                operatorUse = sub_Sign.Text; //Identifies which case to execute in the switch
+                equals_Btn.PerformClick(); 
+                operatorUse = sub_Sign.Text;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }          
             else
             {
-                //Follows the regular subtraction syntax
                 operatorUse = sub_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
             }
         }
-        //End of subtraction operation code
 
-        //Start of multiplication operation code
         private void mul_Sign_Click(object sender, EventArgs e)
         {
-            //This if statement takes care of the successive multiplication of numbers without pressing the equals button
             if (input1 != 0)
             {
-                equals_Btn.PerformClick(); //Calls the code when equals button is pressed
-                operatorUse = mul_Sign.Text; //Identifies which case to execute in the switch
+                equals_Btn.PerformClick(); 
+                operatorUse = mul_Sign.Text; 
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
             }
-         
             else
             {
-                //Follows the regular multiplication syntax
                 operatorUse = mul_Sign.Text;
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
@@ -321,6 +309,11 @@ namespace OOP_Calculator
             lst_Memory.Items.Add(txtbxOutput.Text);
             txtbxOutput.Text = "0";
             lbl_View.Text = "";
+
+            btn_Mminus.Enabled = true;
+            btn_Mplus.Enabled = true;
+            btn_MR.Enabled = true;
+            btn_MC.Enabled = true;
         }
 
         private void btn_MC_Click(object sender, EventArgs e)
@@ -330,8 +323,10 @@ namespace OOP_Calculator
 
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            //txtbxOutput.Text = txtbx_Saved1.Text;
-            //lbl_View.Text = txtbxOutput.Text;
+            txtbxOutput.Clear();
+            string recall = lst_Memory.SelectedItem.ToString();
+            txtbxOutput.Text = txtbxOutput.Text + double.Parse(recall).ToString();
+            lbl_View.Text = lbl_View.Text + double.Parse(recall).ToString();
         }
 
         private void btn_Mplus_Click(object sender, EventArgs e)
@@ -393,7 +388,7 @@ namespace OOP_Calculator
             else if(input4 >= 0 && sqrtIsClicked == true)
             {
                 answer = Math.Sqrt(input4);
-                lbl_View.Text = "√" + input4;
+                lbl_View.Text = lbl_View.Text +  "√" + input4;
                 txtbxOutput.Text = answer.ToString();
             }
         }
