@@ -400,6 +400,7 @@ namespace OOP_Calculator
             
             double input3;
             input3 = Double.Parse(txtbxOutput.Text);
+            string input = input3.ToString();
 
             if ((fractionIsClicked == true) && (lbl_View.Text == txtbxOutput.Text))
             {
@@ -413,8 +414,9 @@ namespace OOP_Calculator
             {
                 double answer;
                 answer = (1 / input3);
+                int len = input.Length;
                 string fraction = lbl_View.Text;
-                string history = fraction.Remove(txtbxOutput.TextLength + 2);
+                string history = fraction.Remove(len - 1);
                 lbl_View.Text = history + "(1/" + input3 + ")";
                 txtbxOutput.Text = answer.ToString();
             }
