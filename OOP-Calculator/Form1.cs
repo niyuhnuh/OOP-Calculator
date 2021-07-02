@@ -70,23 +70,19 @@ namespace OOP_Calculator
             txtbxOutput.Text = "0";
         }
 
-        //Start of decimal button function code
         private void decBtn_click(object sender, EventArgs e)
         {
-            //This if-else statement checks if the current input already has a decimal in it
             if (!txtbxOutput.Text.Contains("."))
             {
                 txtbxOutput.Text = txtbxOutput.Text + dec_Btn.Text;
-                lbl_View.Text = txtbxOutput.Text;
+                lbl_View.Text = lbl_View.Text + dec_Btn.Text;
             }
-            //If it does, the current text would remain
             else if (txtbxOutput.Text.Contains(".")) 
             {
                 txtbxOutput.Text = txtbxOutput.Text;
-                lbl_View.Text = txtbxOutput.Text;
+                lbl_View.Text = lbl_View.Text + dec_Btn.Text;
             }
         }
-        //End of decimal button function code
 
         private void numBtn_click(object sender, EventArgs e)
         {
@@ -336,44 +332,36 @@ namespace OOP_Calculator
             lbl_View.Text = "";
         }
 
-        //Start of memory clear button function code
         private void btn_MC_Click(object sender, EventArgs e)
         {
-            txtbx_Saved1.Clear();
+            lst_Memory.Items.Clear();
         }
-        //End of memory clear button function code
 
-        //Start of memory recall button function code
         private void btn_MR_Click(object sender, EventArgs e)
         {
-            txtbxOutput.Text = txtbx_Saved1.Text;
-            lbl_View.Text = txtbxOutput.Text;
+            //txtbxOutput.Text = txtbx_Saved1.Text;
+            //lbl_View.Text = txtbxOutput.Text;
         }
-        //End of memory recall button function code
 
-        //Start of memory plus button function code
+
         private void btn_Mplus_Click(object sender, EventArgs e)
         {
-            double input5 = Double.Parse(txtbx_Saved1.Text);
-            double answer;
-            answer = Double.Parse(lbl_View.Text) + input5;
-            txtbxOutput.Text = answer.ToString();
-            lbl_View.Text = txtbxOutput.Text;
+            //double input5 = Double.Parse(txtbx_Saved1.Text);
+            //double answer;
+            //answer = Double.Parse(lbl_View.Text) + input5;
+            //txtbxOutput.Text = answer.ToString();
+            //lbl_View.Text = txtbxOutput.Text;
         }
-        //End of memory plus button function code
 
-        //Start of memory minus button function code
         private void btn_Mminus_Click(object sender, EventArgs e)
         {  
-            double input5 = Double.Parse(txtbx_Saved1.Text);
-            double answer;
-            answer = (Double.Parse(lbl_View.Text) - input5);
-            txtbxOutput.Text = answer.ToString();
-            lbl_View.Text = txtbxOutput.Text;
+            //double input5 = Double.Parse(txtbx_Saved1.Text);
+            //double answer;
+            //answer = (Double.Parse(lbl_View.Text) - input5);
+            //txtbxOutput.Text = answer.ToString();
+            //lbl_View.Text = txtbxOutput.Text;
         }
-        //End of memory minus button function code
 
-        //Start of memory save textbox function code
         private void txtbx_Saved1_TextChanged(object sender, EventArgs e)
         { 
              btn_Mminus.Enabled = true;
@@ -381,13 +369,9 @@ namespace OOP_Calculator
              btn_MR.Enabled = true;
              btn_MC.Enabled = true;     
         }
-        //End of memory save textbox function code
 
-        //Start of Keypress event
         private void txtbxOutput_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Checks if the key pressed is a digit and a control
-            //Does not need to check if its a number from the top of the keyboard or from the numpad
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
@@ -395,18 +379,13 @@ namespace OOP_Calculator
  
             }
         }
-        //End of Keypress event
 
-        //Start of txtbxOutput Click event
         private void txtbxOutput_Click(object sender, EventArgs e)
         {
             txtbxOutput.Clear();
             lbl_View.Text = txtbxOutput.Text;
         }
-        //End of txtbxOutput Click event
 
-
-        //Start of square root function code
         private void btn_Sqrt_Click(object sender, EventArgs e)
         {
             sqrtIsClicked = true;
@@ -429,9 +408,7 @@ namespace OOP_Calculator
                 txtbxOutput.Text = answer.ToString();
             }
         }
-        //End of square root function code
 
-        //Start of fractiom function code
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
@@ -455,6 +432,5 @@ namespace OOP_Calculator
                 lbl_View.Text = txtbxOutput.Text;
             }
         }
-        //End of fractiom function code
     }
 }
