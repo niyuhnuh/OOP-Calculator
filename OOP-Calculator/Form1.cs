@@ -42,6 +42,7 @@ namespace OOP_Calculator
             txtbxOutput.Text = "0";
             input1 = 0;
             lbl_View.Text = "";
+            operatorUse = "";
             btn_MC.Enabled = false;
             btn_MR.Enabled = false;
             btn_Mplus.Enabled = false;
@@ -106,6 +107,7 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
+                operatorUse = "";
             }
             else
             {
@@ -113,6 +115,7 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
+                operatorUse = "";
             }
         }
 
@@ -125,6 +128,7 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
+                operatorUse = "";
             }
             else
             {
@@ -132,6 +136,7 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
+                operatorUse = "";
             }
         }
 
@@ -144,6 +149,7 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
+                operatorUse = "";
             }
             else
             {
@@ -151,6 +157,7 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
+                operatorUse = "";
             }
         }
 
@@ -163,6 +170,7 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
+                operatorUse = "";
             }
             else
             {
@@ -170,6 +178,7 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
+                operatorUse = "";
             }
         }
  
