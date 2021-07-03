@@ -106,8 +106,7 @@ namespace OOP_Calculator
                 answer = input1 + Double.Parse(txtbxOutput.Text);
                 input1 = answer;
                 txtbxOutput.Clear();
-                lbl_View.Text = lbl_View.Text + add_Sign.Text;
-                operatorUse = "";
+                lbl_View.Text = lbl_View.Text + add_Sign.Text;                
             }
             else
             {
@@ -115,7 +114,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + add_Sign.Text;
-                operatorUse = "";
             }
         }
 
@@ -128,7 +126,6 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
-                operatorUse = "";
             }
             else
             {
@@ -136,7 +133,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + sub_Sign.Text;
-                operatorUse = "";
             }
         }
 
@@ -149,7 +145,6 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
-                operatorUse = "";
             }
             else
             {
@@ -157,7 +152,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + mul_Sign.Text;
-                operatorUse = "";
             }
         }
 
@@ -170,7 +164,6 @@ namespace OOP_Calculator
                 input1 = answer;
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
-                operatorUse = "";
             }
             else
             {
@@ -178,7 +171,6 @@ namespace OOP_Calculator
                 input1 = Double.Parse(txtbxOutput.Text);
                 txtbxOutput.Clear();
                 lbl_View.Text = lbl_View.Text + div_Sign.Text;
-                operatorUse = "";
             }
         }
  
