@@ -355,32 +355,38 @@ namespace OOP_Calculator
         private void btn_Frac_Click(object sender, EventArgs e)
         {
             fractionIsClicked = true;
-            double input2;
+            lbl_View.Text = "";
             double answer;
-            input2 = Double.Parse(txtbxOutput.Text);
+            double input3 = Double.Parse(txtbxOutput.Text);
+            answer = (1 / input3);
+            lbl_View.Text = lbl_View.Text + answer;
+            txtbxOutput.Text = answer.ToString();
 
-            if ((fractionIsClicked == true) && !(lbl_View.Text == txtbxOutput.Text))
-            {
-                answer = (1 / input2);
-                lbl_View.Text = lbl_View.Text + "(1/" + input2 + ")" + operatorUse;
-                input1 = answer;
-                txtbxOutput.Text = answer.ToString();
-            }
-            if (fractionIsClicked == true && txtbxOutput.Text == "0")
-            {
-                MessageBox.Show("Divide by 0 Error. Please enter a nonzero number.");
-                txtbxOutput.Clear();
-                txtbxOutput.Text = "0";
-                input1 = 0;
-                lbl_View.Text = "";
-            }
-            else if (fractionIsClicked == true)
-            {
-                answer = (1 / input2);
-                txtbxOutput.Text = answer.ToString();
-                lbl_View.Text = "(1/" + input2 + ")";
+            if (fractionIsClicked == true && operatorUse == "+")
+            {       
+                add_Sign.PerformClick();
+                fractionIsClicked = false;
                 input1 = answer;
             }
+            if (fractionIsClicked == true && operatorUse == "-")
+            {
+                sub_Sign.PerformClick();
+                fractionIsClicked = false;
+                input1 = answer;
+            }
+            if (fractionIsClicked == true && operatorUse == "*")
+            {
+                mul_Sign.PerformClick();
+                fractionIsClicked = false;
+                input1 = answer;
+            }
+            if (fractionIsClicked == true && operatorUse == "/")
+            {
+                div_Sign.PerformClick();
+                fractionIsClicked = false;
+                input1 = answer;
+            }
+
         }
     }
 }
